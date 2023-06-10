@@ -91,11 +91,47 @@ var story_page_13_input = document.getElementById('story_page_13_input');
 var story_page_13_confirm = document.getElementById('story_page_13_confirm');
 var story_page_13_hint = document.getElementById('story_page_13_hint');
 
+var story_page_14 = document.getElementById('story_page_14');
+var story_page_14_close = document.getElementById('story_page_14_close');
+var story_page_14_back = document.getElementById('story_page_14_back');
+var story_page_14_next = document.getElementById('story_page_14_next');
+
+var story_page_15 = document.getElementById('story_page_15');
+var story_page_15_close = document.getElementById('story_page_15_close');
+var story_page_15_back = document.getElementById('story_page_15_back');
+var story_page_15_input = document.getElementById('story_page_15_input');
+var story_page_15_confirm = document.getElementById('story_page_15_confirm');
+var story_page_15_hint = document.getElementById('story_page_15_hint');
+
+var story_page_16 = document.getElementById('story_page_16');
+var story_page_16_close = document.getElementById('story_page_16_close');
+var story_page_16_back = document.getElementById('story_page_16_back');
+var story_page_16_next = document.getElementById('story_page_16_next');
+
+var story_page_17 = document.getElementById('story_page_17');
+var story_page_17_close = document.getElementById('story_page_17_close');
+var story_page_17_back = document.getElementById('story_page_17_back');
+var story_page_17_next = document.getElementById('story_page_17_next');
+
+var story_page_18 = document.getElementById('story_page_18');
+var story_page_18_close = document.getElementById('story_page_18_close');
+var story_page_18_back = document.getElementById('story_page_18_back');
+var story_page_18_input = document.getElementById('story_page_18_input');
+var story_page_18_confirm = document.getElementById('story_page_18_confirm');
+var story_page_18_hint = document.getElementById('story_page_18_hint');
+
+var story_page_19 = document.getElementById('story_page_19');
+var story_page_19_close = document.getElementById('story_page_19_close');
+var story_page_19_back = document.getElementById('story_page_19_back');
+var story_page_19_delete = document.getElementById('story_page_19_delete');
+
 function init() {
     story_page_3_input.setAttribute("autocomplete", "off");
     story_page_6_input.setAttribute("autocomplete", "off");
     story_page_9_input.setAttribute("autocomplete", "off");
     story_page_11_input.setAttribute("autocomplete", "off");
+    story_page_13_input.setAttribute("autocomplete", "off");
+    story_page_15_input.setAttribute("autocomplete", "off");
 }
 
 function bgmChange(track) {
@@ -187,7 +223,7 @@ story_page_3_confirm.addEventListener('click', function () {
     }
 })
 story_page_3_hint.addEventListener('click', function () {
-    alert("힌트 리소스 부족");
+    alert("힌트 리소스 없음");
 })
 
 story_page_4_close.addEventListener('click', function () {
@@ -235,7 +271,7 @@ story_page_6_confirm.addEventListener('click', function () {
     }
 })
 story_page_6_hint.addEventListener('click', function () {
-    alert("힌트 리소스 부족");
+    alert("힌트 리소스 없음");
 })
 
 story_page_7_close.addEventListener('click', function () {
@@ -275,7 +311,7 @@ story_page_9_back.addEventListener('click', function () {
 story_page_9_confirm.addEventListener('click', function () {
     var inputValue = story_page_9_input.value;
     if (inputValue === "") {
-    //if (inputValue === "MASTERMIND") {
+    //if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "mastermind") {
         story_page_10.style.display = "flex";
         story_page_9.style.display = "none";
     } else {
@@ -283,7 +319,7 @@ story_page_9_confirm.addEventListener('click', function () {
     }
 })
 story_page_9_hint.addEventListener('click', function () {
-    alert("힌트 리소스 부족");
+    alert("힌트 리소스 없음");
 })
 
 story_page_10_close.addEventListener('click', function () {
@@ -310,7 +346,7 @@ story_page_11_back.addEventListener('click', function () {
 story_page_11_confirm.addEventListener('click', function () {
     var inputValue = story_page_11_input.value;
     if (inputValue === "") {
-    //if (inputValue === "TRUTH") {
+    //if (inputValue === "TRUTH" || inputValue === "Truth" || inputValue === "truth") {
         story_page_12.style.display = "flex";
         story_page_11.style.display = "none";
     } else {
@@ -318,7 +354,7 @@ story_page_11_confirm.addEventListener('click', function () {
     }
 })
 story_page_11_hint.addEventListener('click', function () {
-    alert("힌트 리소스 부족");
+    alert("힌트 리소스 없음");
 })
 
 story_page_12_close.addEventListener('click', function () {
@@ -353,5 +389,100 @@ story_page_13_confirm.addEventListener('click', function () {
     }
 })
 story_page_13_hint.addEventListener('click', function () {
-    alert("힌트 리소스 부족");
+    alert("힌트 리소스 없음");
+})
+
+story_page_14_close.addEventListener('click', function () {
+    story_page_14.style.display = "none";
+    bgmChange(1);
+})
+story_page_14_back.addEventListener('click', function () {
+    story_page_13.style.display = "flex";
+    story_page_14.style.display = "none";
+})
+story_page_14_next.addEventListener('click', function () {
+    story_page_15.style.display = "flex";
+    story_page_14.style.display = "none";
+})
+
+story_page_15_close.addEventListener('click', function () {
+    story_page_15.style.display = "none";
+    bgmChange(1);
+})
+story_page_15_back.addEventListener('click', function () {
+    story_page_14.style.display = "flex";
+    story_page_15.style.display = "none";
+})
+story_page_15_confirm.addEventListener('click', function () {
+    var inputValue = story_page_15_input.value;
+    if (inputValue === "") {
+    //if (inputValue === "성물제어실") {
+        story_page_16.style.display = "flex";
+        story_page_15.style.display = "none";
+    } else {
+        wrong_sound.play();
+    }
+})
+story_page_15_hint.addEventListener('click', function () {
+    alert("힌트 리소스 없음");
+})
+
+story_page_16_close.addEventListener('click', function () {
+    story_page_16.style.display = "none";
+    bgmChange(1);
+})
+story_page_16_back.addEventListener('click', function () {
+    story_page_15.style.display = "flex";
+    story_page_16.style.display = "none";
+})
+story_page_16_next.addEventListener('click', function () {
+    story_page_17.style.display = "flex";
+    story_page_16.style.display = "none";
+})
+
+story_page_17_close.addEventListener('click', function () {
+    story_page_17.style.display = "none";
+    bgmChange(1);
+})
+story_page_17_back.addEventListener('click', function () {
+    story_page_16.style.display = "flex";
+    story_page_17.style.display = "none";
+})
+story_page_17_next.addEventListener('click', function () {
+    story_page_18.style.display = "flex";
+    story_page_17.style.display = "none";
+})
+
+story_page_18_close.addEventListener('click', function () {
+    story_page_18.style.display = "none";
+    bgmChange(1);
+})
+story_page_18_back.addEventListener('click', function () {
+    story_page_17.style.display = "flex";
+    story_page_18.style.display = "none";
+})
+story_page_18_confirm.addEventListener('click', function () {
+    var inputValue = story_page_18_input.value;
+    if (inputValue === "") {
+    //if (inputValue === "ECHO") {
+        story_page_19.style.display = "flex";
+        story_page_18.style.display = "none";
+    } else {
+        wrong_sound.play();
+    }
+})
+story_page_18_hint.addEventListener('click', function () {
+    alert("힌트 리소스 없음");
+})
+
+story_page_19_close.addEventListener('click', function () {
+    story_page_19.style.display = "none";
+    bgmChange(1);
+})
+story_page_19_back.addEventListener('click', function () {
+    story_page_18.style.display = "flex";
+    story_page_19.style.display = "none";
+})
+story_page_19_next.addEventListener('click', function () {
+    alert("핑거 스냅 효과 리소스 없음");
 })
