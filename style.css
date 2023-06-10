@@ -76,20 +76,6 @@ body {
 	right: 15px;
 }
 
-.story_page_confirm {
-	position: absolute;
-	width: 70px;
-	bottom: 85px;
-	right: 215px;
-}
-
-.story_page_hint {
-	position: absolute;
-	width: 70px;
-	bottom: 85px;
-	right: 140px;
-}
-
 .story_page_back {
 	position: absolute;
 	width: 65px;
@@ -102,6 +88,11 @@ body {
 	width: 65px;
 	bottom: 55px;
 	right: 35px;
+}
+
+.quiz_button {
+	position: absolute;
+	width: 65px;
 }
 
 #mobile_warning {
@@ -190,4 +181,114 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+#story_page_3_input {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	bottom: 85px;
+	left: 135px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#story_page_3_confirm {
+	bottom: 85px;
+	right: 215px;
+}
+
+#story_page_3_hint {
+	bottom: 85px;
+	right: 140px;
+}
+
+#story_page_6_input {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	bottom: 62px;
+	left: 85px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#story_page_6_confirm {
+	bottom: 64px;
+	right: 265px;
+}
+
+#story_page_6_hint {
+	bottom: 64px;
+	right: 190px;
+}
+
+#story_page_9_input {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	bottom: 56px;
+	left: 78px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#story_page_9_confirm {
+	bottom: 58px;
+	right: 272px;
+}
+
+#story_page_9_hint {
+	bottom: 58px;
+	right: 197px;
+}
+
+#story_page_11_input {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	bottom: 59px;
+	left: 78px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#story_page_11_confirm {
+	bottom: 61px;
+	right: 272px;
+}
+
+#story_page_11_hint {
+	bottom: 61px;
+	right: 197px;
+}
+
+#story_page_13_input {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	bottom: 57px;
+	left: 78px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#story_page_13_confirm {
+	bottom: 59px;
+	right: 272px;
+}
+
+#story_page_13_hint {
+	bottom: 59px;
+	right: 197px;
 }
