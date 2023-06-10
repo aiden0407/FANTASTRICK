@@ -15,12 +15,14 @@ body {
 	background-image: url("assets/BG.gif");
 	background-repeat: repeat;
 	background-size: cover;
-	height: 100vh;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: #000; /* 적용할 색상 */
+	padding-top: env(safe-area-inset-top); /* 노치 영역의 상단 패딩 */
+	padding-bottom: env(safe-area-inset-bottom); /* 노치 영역의 하단 패딩 */
 }
 
 .background {
@@ -38,6 +40,7 @@ body {
 }
 
 .display_none_background {
+	margin-top: 10px;
 	position: relative;
 	display: none;
 	flex-direction: column;

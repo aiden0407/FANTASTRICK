@@ -1,3 +1,10 @@
+function setViewportHeight() {
+    var bodyElement = document.querySelector("body");
+    bodyElement.style.height = window.innerHeight + "px";
+}
+window.addEventListener("load", setViewportHeight);
+window.addEventListener("resize", setViewportHeight);
+
 function init() {
     story_page_3_input.setAttribute("autocomplete", "off");
     story_page_6_input.setAttribute("autocomplete", "off");
