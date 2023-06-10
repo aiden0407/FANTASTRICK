@@ -1,130 +1,3 @@
-var main_bgm = document.querySelector("#main_bgm");
-var story_bgm = document.querySelector("#story_bgm");
-var wrong_sound = document.querySelector("#wrong_sound");
-
-var sound_warning = document.getElementById('sound_warning');
-var sound_warning_button = document.getElementById('sound_warning_button');
-
-var authentication_check = document.getElementById('authentication_check');
-var authentication_check_button = document.getElementById('authentication_check_button');
-
-var main_menu = document.getElementById('main_menu');
-var main_menu_button1 = document.getElementById('main_menu_button1');
-var main_menu_button2 = document.getElementById('main_menu_button2');
-var main_menu_button3 = document.getElementById('main_menu_button3');
-var main_menu_button4 = document.getElementById('main_menu_button4');
-var main_menu_popup = document.getElementById('main_menu_popup');
-var main_menu_popup_close = document.getElementById('main_menu_popup_close');
-var main_menu_popup_confirm = document.getElementById('main_menu_popup_confirm');
-
-var story_page_1 = document.getElementById('story_page_1');
-var story_page_1_close = document.getElementById('story_page_1_close');
-var story_page_1_next = document.getElementById('story_page_1_next');
-
-var story_page_2 = document.getElementById('story_page_2');
-var story_page_2_close = document.getElementById('story_page_2_close');
-var story_page_2_back = document.getElementById('story_page_2_back');
-var story_page_2_next = document.getElementById('story_page_2_next');
-
-var story_page_3 = document.getElementById('story_page_3');
-var story_page_3_close = document.getElementById('story_page_3_close');
-var story_page_3_back = document.getElementById('story_page_3_back');
-var story_page_3_input = document.getElementById('story_page_3_input');
-var story_page_3_confirm = document.getElementById('story_page_3_confirm');
-var story_page_3_hint = document.getElementById('story_page_3_hint');
-
-var story_page_4 = document.getElementById('story_page_4');
-var story_page_4_close = document.getElementById('story_page_4_close');
-var story_page_4_back = document.getElementById('story_page_4_back');
-var story_page_4_next = document.getElementById('story_page_4_next');
-
-var story_page_5 = document.getElementById('story_page_5');
-var story_page_5_close = document.getElementById('story_page_5_close');
-var story_page_5_back = document.getElementById('story_page_5_back');
-var story_page_5_next = document.getElementById('story_page_5_next');
-
-var story_page_6 = document.getElementById('story_page_6');
-var story_page_6_close = document.getElementById('story_page_6_close');
-var story_page_6_back = document.getElementById('story_page_6_back');
-var story_page_6_input = document.getElementById('story_page_6_input');
-var story_page_6_confirm = document.getElementById('story_page_6_confirm');
-var story_page_6_hint = document.getElementById('story_page_6_hint');
-
-var story_page_7 = document.getElementById('story_page_7');
-var story_page_7_close = document.getElementById('story_page_7_close');
-var story_page_7_back = document.getElementById('story_page_7_back');
-var story_page_7_next = document.getElementById('story_page_7_next');
-
-var story_page_8 = document.getElementById('story_page_8');
-var story_page_8_close = document.getElementById('story_page_8_close');
-var story_page_8_back = document.getElementById('story_page_8_back');
-var story_page_8_next = document.getElementById('story_page_8_next');
-
-var story_page_9 = document.getElementById('story_page_9');
-var story_page_9_close = document.getElementById('story_page_9_close');
-var story_page_9_back = document.getElementById('story_page_9_back');
-var story_page_9_input = document.getElementById('story_page_9_input');
-var story_page_9_confirm = document.getElementById('story_page_9_confirm');
-var story_page_9_hint = document.getElementById('story_page_9_hint');
-
-var story_page_10 = document.getElementById('story_page_10');
-var story_page_10_close = document.getElementById('story_page_10_close');
-var story_page_10_back = document.getElementById('story_page_10_back');
-var story_page_10_next = document.getElementById('story_page_10_next');
-
-var story_page_11 = document.getElementById('story_page_11');
-var story_page_11_close = document.getElementById('story_page_11_close');
-var story_page_11_back = document.getElementById('story_page_11_back');
-var story_page_11_input = document.getElementById('story_page_11_input');
-var story_page_11_confirm = document.getElementById('story_page_11_confirm');
-var story_page_11_hint = document.getElementById('story_page_11_hint');
-
-var story_page_12 = document.getElementById('story_page_12');
-var story_page_12_close = document.getElementById('story_page_12_close');
-var story_page_12_back = document.getElementById('story_page_12_back');
-var story_page_12_next = document.getElementById('story_page_12_next');
-
-var story_page_13 = document.getElementById('story_page_13');
-var story_page_13_close = document.getElementById('story_page_13_close');
-var story_page_13_back = document.getElementById('story_page_13_back');
-var story_page_13_input = document.getElementById('story_page_13_input');
-var story_page_13_confirm = document.getElementById('story_page_13_confirm');
-var story_page_13_hint = document.getElementById('story_page_13_hint');
-
-var story_page_14 = document.getElementById('story_page_14');
-var story_page_14_close = document.getElementById('story_page_14_close');
-var story_page_14_back = document.getElementById('story_page_14_back');
-var story_page_14_next = document.getElementById('story_page_14_next');
-
-var story_page_15 = document.getElementById('story_page_15');
-var story_page_15_close = document.getElementById('story_page_15_close');
-var story_page_15_back = document.getElementById('story_page_15_back');
-var story_page_15_input = document.getElementById('story_page_15_input');
-var story_page_15_confirm = document.getElementById('story_page_15_confirm');
-var story_page_15_hint = document.getElementById('story_page_15_hint');
-
-var story_page_16 = document.getElementById('story_page_16');
-var story_page_16_close = document.getElementById('story_page_16_close');
-var story_page_16_back = document.getElementById('story_page_16_back');
-var story_page_16_next = document.getElementById('story_page_16_next');
-
-var story_page_17 = document.getElementById('story_page_17');
-var story_page_17_close = document.getElementById('story_page_17_close');
-var story_page_17_back = document.getElementById('story_page_17_back');
-var story_page_17_next = document.getElementById('story_page_17_next');
-
-var story_page_18 = document.getElementById('story_page_18');
-var story_page_18_close = document.getElementById('story_page_18_close');
-var story_page_18_back = document.getElementById('story_page_18_back');
-var story_page_18_input = document.getElementById('story_page_18_input');
-var story_page_18_confirm = document.getElementById('story_page_18_confirm');
-var story_page_18_hint = document.getElementById('story_page_18_hint');
-
-var story_page_19 = document.getElementById('story_page_19');
-var story_page_19_close = document.getElementById('story_page_19_close');
-var story_page_19_back = document.getElementById('story_page_19_back');
-var story_page_19_delete = document.getElementById('story_page_19_delete');
-
 function init() {
     story_page_3_input.setAttribute("autocomplete", "off");
     story_page_6_input.setAttribute("autocomplete", "off");
@@ -132,6 +5,7 @@ function init() {
     story_page_11_input.setAttribute("autocomplete", "off");
     story_page_13_input.setAttribute("autocomplete", "off");
     story_page_15_input.setAttribute("autocomplete", "off");
+    story_page_18_input.setAttribute("autocomplete", "off");
 }
 
 function bgmChange(track) {
@@ -214,8 +88,7 @@ story_page_3_back.addEventListener('click', function () {
 })
 story_page_3_confirm.addEventListener('click', function () {
     var inputValue = story_page_3_input.value;
-    if (inputValue === "") {
-    //if (inputValue === "12512") {
+    if (inputValue === "12512") {
         story_page_4.style.display = "flex";
         story_page_3.style.display = "none";
     } else {
@@ -262,8 +135,7 @@ story_page_6_back.addEventListener('click', function () {
 })
 story_page_6_confirm.addEventListener('click', function () {
     var inputValue = story_page_6_input.value;
-    if (inputValue === "") {
-    //if (inputValue === "LIFE") {
+    if (inputValue === "LIFE") {
         story_page_7.style.display = "flex";
         story_page_6.style.display = "none";
     } else {
@@ -310,8 +182,7 @@ story_page_9_back.addEventListener('click', function () {
 })
 story_page_9_confirm.addEventListener('click', function () {
     var inputValue = story_page_9_input.value;
-    if (inputValue === "") {
-    //if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "mastermind") {
+    if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "mastermind") {
         story_page_10.style.display = "flex";
         story_page_9.style.display = "none";
     } else {
@@ -345,8 +216,7 @@ story_page_11_back.addEventListener('click', function () {
 })
 story_page_11_confirm.addEventListener('click', function () {
     var inputValue = story_page_11_input.value;
-    if (inputValue === "") {
-    //if (inputValue === "TRUTH" || inputValue === "Truth" || inputValue === "truth") {
+    if (inputValue === "TRUTH" || inputValue === "Truth" || inputValue === "truth") {
         story_page_12.style.display = "flex";
         story_page_11.style.display = "none";
     } else {
@@ -380,8 +250,7 @@ story_page_13_back.addEventListener('click', function () {
 })
 story_page_13_confirm.addEventListener('click', function () {
     var inputValue = story_page_13_input.value;
-    if (inputValue === "") {
-    //if (inputValue === "원액") {
+    if (inputValue === "원액") {
         story_page_14.style.display = "flex";
         story_page_13.style.display = "none";
     } else {
@@ -415,8 +284,7 @@ story_page_15_back.addEventListener('click', function () {
 })
 story_page_15_confirm.addEventListener('click', function () {
     var inputValue = story_page_15_input.value;
-    if (inputValue === "") {
-    //if (inputValue === "성물제어실") {
+    if (inputValue === "성물제어실") {
         story_page_16.style.display = "flex";
         story_page_15.style.display = "none";
     } else {
@@ -463,8 +331,7 @@ story_page_18_back.addEventListener('click', function () {
 })
 story_page_18_confirm.addEventListener('click', function () {
     var inputValue = story_page_18_input.value;
-    if (inputValue === "") {
-    //if (inputValue === "ECHO") {
+    if (inputValue === "ECHO") {
         story_page_19.style.display = "flex";
         story_page_18.style.display = "none";
     } else {
@@ -483,6 +350,28 @@ story_page_19_back.addEventListener('click', function () {
     story_page_18.style.display = "flex";
     story_page_19.style.display = "none";
 })
-story_page_19_next.addEventListener('click', function () {
-    alert("핑거 스냅 효과 리소스 없음");
+story_page_19_delete.addEventListener('click', function () {
+    //alert("핑거 스냅 효과 리소스 없음");
+
+    var gifContainer = document.querySelector(".gif-container");
+    var gifImage = new Image();
+    gifImage.src = "assets/hacker.gif";
+    
+    gifContainer.appendChild(gifImage);
+    gifContainer.style.display = "block";
+    
+    setTimeout(function() {
+      gifContainer.style.display = "none";
+      gifContainer.removeChild(gifImage);
+      story_page_19.style.display = "none";
+      story_page_popup.style.display = "flex";
+    }, 6500);
+})
+story_page_popup_close.addEventListener('click', function () {
+    story_page_popup.style.display = "none";
+    bgmChange(1);
+})
+story_page_popup_confirm.addEventListener('click', function () {
+    story_page_popup.style.display = "none";
+    bgmChange(1);
 })

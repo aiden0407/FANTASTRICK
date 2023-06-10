@@ -292,3 +292,97 @@ body {
 	bottom: 59px;
 	right: 197px;
 }
+
+#story_page_15_input {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	bottom: 64px;
+	left: 54px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#story_page_15_confirm {
+	bottom: 66px;
+	right: 296px;
+}
+
+#story_page_15_hint {
+	bottom: 66px;
+	right: 221px;
+}
+
+#story_page_18_input {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	bottom: 51px;
+	left: 82px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#story_page_18_confirm {
+	bottom: 53px;
+	right: 272px;
+}
+
+#story_page_18_hint {
+	bottom: 53px;
+	right: 197px;
+}
+
+#story_page_19_delete {
+	position: absolute;
+	width: 90px;
+	bottom: 88px;
+	right: 92px;
+}
+
+.gif-container {
+	display: none;
+	position: absolute;
+	width: 500px;
+	height: 334px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.gif-container img {
+	width: 100%;
+}
+
+#story_page_popup {
+	position: absolute;
+	display: none;
+	width: 320px;
+	height: 150px;
+}
+
+#story_page_popup_background {
+	position: absolute;
+	width: 320px;
+	margin-top: 5px;
+}
+
+#story_page_popup_close {
+	position: absolute;
+	width: 25px;
+	top: 10px;
+	right: 10px;
+}
+
+#story_page_popup_confirm {
+	position: absolute;
+	width: 120px;
+	margin-top: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
