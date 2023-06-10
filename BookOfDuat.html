@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>A.N.I DATABASE SYSTEM</title>
+</head>
+
+<body>
+  <!-- 모바일 세로화면 경고 -->
+  <div class="background" id="mobile_warning">
+    <img id="mobile_warning_image" src="https://i.ibb.co/98WW3n6/rotate.png" alt="스마트폰 가로 회전" /><br />
+    <p>본 페이지는 가로 화면에 최적화 되어있습니다.</p>
+    <p>스마트폰을 가로로 돌려서 사용해 주세요.</p>
+  </div>
+  <!-- 모바일 세로화면 경고 End -->
+
+  <!-- BGM 경고 -->
+  <div class="background" id="sound_warning">
+    <i id="headset-icon">&#xf025;</i><br />
+    <p>시작 시 음악이 자동 재생됩니다.</p>
+    <p>스피커/이어폰을 준비해 주세요.</p><br />
+    <button type="button" class="custom_button" id="sound_warning_button">시작하기</button>
+  </div>
+  <!-- BGM 경고 End -->
+
+  <!-- BGM Assets -->
+  <div id="sound">
+    <audio loop id="main_bgm" src="http://fantastrick.co.kr/source/mainpage.mp3"></audio>
+    <audio loop id="story_bgm" src="http://fantastrick.co.kr/source/storypage.mp3"></audio>
+    <audio id="wrong_sound" src="/assets/wrong.ogg"></audio>
+  </div>
+  <!-- BGM Assets End -->
+
+  <div class="background"  id="authentication_check">
+    <p>"사용 권한 확인" 페이지 리소스 없음</p>
+    <button type="button" class="custom_button" id="authentication_check_button">확인</button>
+  </div>
+
+  <div class="display_none_background" id="main_menu">
+    <img id="main_menu_background" src="/assets/1_bg.png" alt="메인 메뉴 이미지" />
+    <img id="main_menu_button1" src="/assets/1_duat_universe_button.png" alt="사자의 서 설정" />
+    <img id="main_menu_button2" src="/assets/1_story_content_button.png" alt="스토리 모드" />
+    <img id="main_menu_button3" src="/assets/1_story_book_button.png" alt="사자의 서 스토리북" />
+    <img id="main_menu_button4" src="/assets/1_1+2_button.png" alt="1,2호점 통합페이지" />
+
+    <div id="main_menu_popup">
+      <img id="main_menu_popup_background" src="/assets/1_content_popup_bg.png" alt="스토리 모드 팝업" />
+      <img id="main_menu_popup_close" src="/assets/close_button.png" alt="X" />
+      <img id="main_menu_popup_confirm" src="/assets/1_ok_popup_button.png" alt="확인" />
+    </div>
+
+    <div class="story_page"  id="story_page_1">
+      <img class="story_page_background" src="/assets/content1_bg.png" alt="스토리 페이지1" />
+      <img class="story_page_close" id="story_page_1_close" src="/assets/close_button.png" alt="X" />
+      <img class="story_page_next" id="story_page_1_next" src="/assets/content_next_button.png" alt="NEXT" />
+    </div>
+
+    <div class="story_page"  id="story_page_2">
+      <img class="story_page_background" src="/assets/content2_bg.png" alt="스토리 페이지2" />
+      <img class="story_page_close" id="story_page_2_close" src="/assets/close_button.png" alt="X" />
+      <img class="story_page_back" id="story_page_2_back" src="/assets/content_back_button.png" alt="BACK" />
+      <img class="story_page_next" id="story_page_2_next" src="/assets/content_next_button.png" alt="NEXT" />
+    </div>
+
+    <div class="story_page"  id="story_page_3">
+      <img class="story_page_background" src="/assets/content3_bg.png" alt="스토리 페이지3" />
+      <img class="story_page_close" id="story_page_3_close" src="/assets/close_button.png" alt="X" />
+      <img class="story_page_confirm" id="story_page_3_confirm" src="/assets/content_ok_button.png" alt="확인" />
+      <img class="story_page_hint" id="story_page_3_hint" src="/assets/content_hint_button.png" alt="HINT" />
+      <img class="story_page_back" id="story_page_3_back" src="/assets/content_back_button.png" alt="BACK" />
+    </div>
+
+
+  </div>
+
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
