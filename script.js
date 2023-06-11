@@ -6,6 +6,7 @@ window.addEventListener("load", setViewportHeight);
 window.addEventListener("resize", setViewportHeight);
 
 function init() {
+    authentication_check_input.setAttribute("autocomplete", "off");
     story_page_3_input.setAttribute("autocomplete", "off");
     story_page_6_input.setAttribute("autocomplete", "off");
     story_page_9_input.setAttribute("autocomplete", "off");
