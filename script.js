@@ -365,7 +365,7 @@ story_page_19_delete.addEventListener('click', function () {
     gifImage.src = "assets/hacker.gif";
     
     gifContainer.appendChild(gifImage);
-    gifContainer.style.display = "block";
+    gifContainer.style.display = "flex";
     
     setTimeout(function() {
       gifContainer.style.display = "none";
