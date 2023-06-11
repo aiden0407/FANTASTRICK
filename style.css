@@ -121,8 +121,25 @@ body {
 	color: #fff;
 }
 
-#authentication_check {
-	gap: 30px;
+#authentication_check_background {
+	width: 666px;
+}
+
+#authentication_check_input {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	bottom: 65px;
+	left: 306px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#authentication_check_confirm {
+	bottom: 66px;
+	right: 120px;
 }
 
 #main_menu_background {

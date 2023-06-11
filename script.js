@@ -35,11 +35,18 @@ function bgmChange(track) {
 
 sound_warning_button.addEventListener('click', function () {
     sound_warning.style.display = "none";
+    authentication_check.style.display = "flex";
     bgmChange(1);
 })
-authentication_check_button.addEventListener('click', function () {
-    authentication_check.style.display = "none";
-    main_menu.style.display = "flex";
+
+authentication_check_confirm.addEventListener('click', function () {
+    var inputValue = authentication_check_input.value;
+    if (inputValue === "e3b1" || inputValue === "E3B1") {
+        main_menu.style.display = "flex";
+        authentication_check.style.display = "none";
+    } else {
+        wrong_sound.play();
+    }
 })
 
 main_menu_button1.addEventListener('click', function () {
