@@ -189,27 +189,32 @@ story_page_18_confirm.addEventListener('click', function () {
 })
 
 story_page_19_delete.addEventListener('click', function () {
-    //alert("핑거 스냅 효과 리소스 없음");
+    var glitchElement = document.querySelector('.glitch');
+    glitchElement.classList.toggle('active');
 
-    var gifContainer = document.querySelector(".gif-container");
-    var gifImage = new Image();
-    gifImage.src = "assets/turnOn.gif";
-    
-    gifContainer.appendChild(gifImage);
-    gifContainer.style.display = "flex";
-    
     setTimeout(function () {
-        gifImage.src = "assets/hacker.gif";
+        glitchElement.classList.remove('active');
+
+        var gifContainer = document.querySelector(".gif-container");
+        var gifImage = new Image();
+        gifImage.src = "assets/turnOn.gif";
+        gifContainer.appendChild(gifImage);
+        gifContainer.style.display = "flex";
+
         setTimeout(function () {
-            gifImage.src = "assets/turnOff.gif";
+            gifImage.src = "assets/hacker.gif";
             setTimeout(function () {
-                gifContainer.style.display = "none";
-                gifContainer.removeChild(gifImage);
-                story_page_19.style.display = "none";
-                story_page_popup.style.display = "flex";
-            }, 2000);
-        }, 5000);
-    }, 300);
+                gifImage.src = "assets/turnOff.gif";
+                setTimeout(function () {
+                    gifContainer.style.display = "none";
+                    gifContainer.removeChild(gifImage);
+                    story_page_19.style.display = "none";
+                    story_page_popup.style.display = "flex";
+                }, 2000);
+            }, 5000);
+        }, 300);
+        
+    }, 2500);
 })
 story_page_popup_close.addEventListener('click', function () {
     story_page_popup.style.display = "none";
