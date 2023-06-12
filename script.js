@@ -42,8 +42,7 @@ sound_warning_button.addEventListener('click', function () {
 
 authentication_check_confirm.addEventListener('click', function () {
     var inputValue = authentication_check_input.value;
-    if (true) {
-    //if (inputValue === "e3b1" || inputValue === "E3B1") {
+    if (inputValue === "e3b1" || inputValue === "E3B1") {
         main_menu.style.display = "flex";
         authentication_check.style.display = "none";
     } else {
@@ -125,8 +124,7 @@ hintBackElements.forEach(function (e) {
 
 story_page_3_confirm.addEventListener('click', function () {
     var inputValue = story_page_3_input.value;
-    if (true) {
-    //if (inputValue === "12512") {
+    if (inputValue === "12512") {
         story_page_4.style.display = "flex";
         story_page_3.style.display = "none";
     } else {
@@ -136,8 +134,7 @@ story_page_3_confirm.addEventListener('click', function () {
 
 story_page_6_confirm.addEventListener('click', function () {
     var inputValue = story_page_6_input.value;
-    if (true) {
-    //if (inputValue === "LIFE") {
+    if (inputValue === "LIFE") {
         story_page_7.style.display = "flex";
         story_page_6.style.display = "none";
     } else {
@@ -147,8 +144,7 @@ story_page_6_confirm.addEventListener('click', function () {
 
 story_page_9_confirm.addEventListener('click', function () {
     var inputValue = story_page_9_input.value;
-    if (true) {
-    //if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "mastermind") {
+    if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "mastermind") {
         story_page_10.style.display = "flex";
         story_page_9.style.display = "none";
     } else {
@@ -158,8 +154,7 @@ story_page_9_confirm.addEventListener('click', function () {
 
 story_page_11_confirm.addEventListener('click', function () {
     var inputValue = story_page_11_input.value;
-    if (true) {
-    //if (inputValue === "TRUTH" || inputValue === "Truth" || inputValue === "truth") {
+    if (inputValue === "TRUTH" || inputValue === "Truth" || inputValue === "truth") {
         story_page_12.style.display = "flex";
         story_page_11.style.display = "none";
     } else {
@@ -169,8 +164,7 @@ story_page_11_confirm.addEventListener('click', function () {
 
 story_page_13_confirm.addEventListener('click', function () {
     var inputValue = story_page_13_input.value;
-    if (true) {
-    //if (inputValue === "원액") {
+    if (inputValue === "원액") {
         story_page_14.style.display = "flex";
         story_page_13.style.display = "none";
     } else {
@@ -180,8 +174,7 @@ story_page_13_confirm.addEventListener('click', function () {
 
 story_page_15_confirm.addEventListener('click', function () {
     var inputValue = story_page_15_input.value;
-    if (true) {
-    //if (inputValue === "성물제어실") {
+    if (inputValue === "성물제어실") {
         story_page_16.style.display = "flex";
         story_page_15.style.display = "none";
     } else {
@@ -191,8 +184,7 @@ story_page_15_confirm.addEventListener('click', function () {
 
 story_page_18_confirm.addEventListener('click', function () {
     var inputValue = story_page_18_input.value;
-    if (true) {
-    //if (inputValue === "ECHO") {
+    if (inputValue === "ECHO") {
         story_page_19.style.display = "flex";
         story_page_18.style.display = "none";
     } else {
