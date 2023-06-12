@@ -62,9 +62,14 @@ main_menu_popup_close.addEventListener('click', function () {
     main_menu_popup.style.display = "none";
 })
 main_menu_popup_confirm.addEventListener('click', function () {
+    story_page_1.style.animation = "popup-animation 0.1s ease-in-out";
     story_page_1.style.display = "flex";
     main_menu_popup.style.display = "none";
     bgmChange(2);
+
+    setTimeout(function () {
+        story_page_1.style.animation = "none";
+    }, 1000);
 })
 
 const pageElements = document.querySelectorAll('.story_page');

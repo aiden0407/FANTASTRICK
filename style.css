@@ -20,9 +20,9 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #000; /* 적용할 색상 */
-	padding-top: env(safe-area-inset-top); /* 노치 영역의 상단 패딩 */
-	padding-bottom: env(safe-area-inset-bottom); /* 노치 영역의 하단 패딩 */
+	background-color: #000;
+	padding-top: env(safe-area-inset-top);
+	padding-bottom: env(safe-area-inset-bottom);
 }
 
 .background {
@@ -181,11 +181,23 @@ body {
 	right: 65px;
 }
 
+@keyframes popup-animation {
+	0% {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 #main_menu_popup {
 	position: absolute;
 	display: none;
 	width: 320px;
 	height: 150px;
+	animation: popup-animation 0.1s ease-in-out;
 }
 
 #main_menu_popup_background {
@@ -510,6 +522,7 @@ body {
 	display: none;
 	width: 320px;
 	height: 150px;
+	animation: popup-animation 0.2s ease-in-out;
 }
 
 #story_page_popup_background {
