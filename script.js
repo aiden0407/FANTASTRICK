@@ -197,17 +197,23 @@ story_page_19_delete.addEventListener('click', function () {
 
     var gifContainer = document.querySelector(".gif-container");
     var gifImage = new Image();
-    gifImage.src = "assets/hacker.gif";
+    gifImage.src = "assets/turnOn.gif";
     
     gifContainer.appendChild(gifImage);
     gifContainer.style.display = "flex";
     
-    setTimeout(function() {
-      gifContainer.style.display = "none";
-      gifContainer.removeChild(gifImage);
-      story_page_19.style.display = "none";
-      story_page_popup.style.display = "flex";
-    }, 6500);
+    setTimeout(function () {
+        gifImage.src = "assets/hacker.gif";
+        setTimeout(function () {
+            gifImage.src = "assets/turnOff.gif";
+            setTimeout(function () {
+                gifContainer.style.display = "none";
+                gifContainer.removeChild(gifImage);
+                story_page_19.style.display = "none";
+                story_page_popup.style.display = "flex";
+            }, 2000);
+        }, 5000);
+    }, 300);
 })
 story_page_popup_close.addEventListener('click', function () {
     story_page_popup.style.display = "none";
