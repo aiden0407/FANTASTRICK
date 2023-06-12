@@ -194,7 +194,6 @@ story_page_19_delete.addEventListener('click', function () {
 
     setTimeout(function () {
         glitchElement.classList.remove('active');
-
         var gifContainer = document.querySelector(".gif-container");
         var gifImage = new Image();
         gifImage.src = "assets/turnOn.gif";
@@ -213,7 +212,6 @@ story_page_19_delete.addEventListener('click', function () {
                 }, 2000);
             }, 5000);
         }, 300);
-        
     }, 2500);
 })
 story_page_popup_close.addEventListener('click', function () {
