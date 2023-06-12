@@ -100,6 +100,16 @@ body {
 	width: 65px;
 }
 
+.input_box {
+	position: absolute;
+	width: 150px;
+	height: 28px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
 #mobile_warning {
 	background-color: #000;
 	z-index: 9999;
@@ -128,15 +138,8 @@ body {
 }
 
 #authentication_check_input {
-	position: absolute;
-	width: 150px;
-	height: 28px;
 	bottom: 65px;
 	left: 306px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 8px;
 }
 
 #authentication_check_confirm {
@@ -208,37 +211,23 @@ body {
 }
 
 #story_page_3_input {
-	position: absolute;
-	width: 150px;
-	height: 28px;
-	bottom: 85px;
+	bottom: 84px;
 	left: 135px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 8px;
 }
 
 #story_page_3_confirm {
-	bottom: 85px;
+	bottom: 86px;
 	right: 215px;
 }
 
 #story_page_3_hint {
-	bottom: 85px;
+	bottom: 86px;
 	right: 140px;
 }
 
 #story_page_6_input {
-	position: absolute;
-	width: 150px;
-	height: 28px;
 	bottom: 62px;
 	left: 85px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 8px;
 }
 
 #story_page_6_confirm {
@@ -252,15 +241,8 @@ body {
 }
 
 #story_page_9_input {
-	position: absolute;
-	width: 150px;
-	height: 28px;
 	bottom: 56px;
 	left: 78px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 8px;
 }
 
 #story_page_9_confirm {
@@ -274,15 +256,8 @@ body {
 }
 
 #story_page_11_input {
-	position: absolute;
-	width: 150px;
-	height: 28px;
 	bottom: 59px;
 	left: 78px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 8px;
 }
 
 #story_page_11_confirm {
@@ -296,15 +271,8 @@ body {
 }
 
 #story_page_13_input {
-	position: absolute;
-	width: 150px;
-	height: 28px;
 	bottom: 57px;
 	left: 78px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 8px;
 }
 
 #story_page_13_confirm {
@@ -318,15 +286,8 @@ body {
 }
 
 #story_page_15_input {
-	position: absolute;
-	width: 150px;
-	height: 28px;
 	bottom: 64px;
 	left: 54px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 8px;
 }
 
 #story_page_15_confirm {
@@ -340,15 +301,8 @@ body {
 }
 
 #story_page_18_input {
-	position: absolute;
-	width: 150px;
-	height: 28px;
 	bottom: 51px;
 	left: 82px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 8px;
 }
 
 #story_page_18_confirm {

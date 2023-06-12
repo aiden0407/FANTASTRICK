@@ -5,15 +5,11 @@ function setViewportHeight() {
 window.addEventListener("load", setViewportHeight);
 window.addEventListener("resize", setViewportHeight);
 
+const inputBoxElements = document.querySelectorAll('.input_box');
 function init() {
-    authentication_check_input.setAttribute("autocomplete", "off");
-    story_page_3_input.setAttribute("autocomplete", "off");
-    story_page_6_input.setAttribute("autocomplete", "off");
-    story_page_9_input.setAttribute("autocomplete", "off");
-    story_page_11_input.setAttribute("autocomplete", "off");
-    story_page_13_input.setAttribute("autocomplete", "off");
-    story_page_15_input.setAttribute("autocomplete", "off");
-    story_page_18_input.setAttribute("autocomplete", "off");
+    inputBoxElements.forEach(function (e) {
+        e.setAttribute("autocomplete", "off");
+    });
 }
 
 function bgmChange(track) {
