@@ -79,7 +79,8 @@ body {
 	right: 15px;
 }
 
-.story_page_back {
+.story_page_back,
+.story_page_hint_back {
 	position: absolute;
 	width: 65px;
 	bottom: 55px;
@@ -93,7 +94,8 @@ body {
 	right: 35px;
 }
 
-.quiz_button {
+.story_page_confirm,
+.story_page_hint {
 	position: absolute;
 	width: 65px;
 }
@@ -138,6 +140,8 @@ body {
 }
 
 #authentication_check_confirm {
+	position: absolute;
+	width: 65px;
 	bottom: 66px;
 	right: 120px;
 }

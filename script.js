@@ -42,7 +42,8 @@ sound_warning_button.addEventListener('click', function () {
 
 authentication_check_confirm.addEventListener('click', function () {
     var inputValue = authentication_check_input.value;
-    if (inputValue === "e3b1" || inputValue === "E3B1") {
+    if (true) {
+    //if (inputValue === "e3b1" || inputValue === "E3B1") {
         main_menu.style.display = "flex";
         authentication_check.style.display = "none";
     } else {
@@ -71,300 +72,134 @@ main_menu_popup_confirm.addEventListener('click', function () {
     bgmChange(2);
 })
 
-story_page_1_close.addEventListener('click', function () {
-    story_page_1.style.display = "none";
-    bgmChange(1);
-})
-story_page_1_next.addEventListener('click', function () {
-    story_page_2.style.display = "flex";
-    story_page_1.style.display = "none";
-})
+const pageElements = document.querySelectorAll('.story_page');
+const closeElements = document.querySelectorAll('.story_page_close');
+const backElements = document.querySelectorAll('.story_page_back');
+const nextElements = document.querySelectorAll('.story_page_next');
+const hintElements = document.querySelectorAll('.story_page_hint');
+const hintBackElements = document.querySelectorAll('.story_page_hint_back');
+closeElements.forEach(function (e) {
+    e.addEventListener('click', function () {
+        pageElements.forEach(function (e) {
+            e.style.display = "none";
+        });
+        bgmChange(1);
+    });
+});
+backElements.forEach(function (e) {
+    e.addEventListener('click', function () {
+        const elementIdIndex = Number(e.id.split('_')[2]);
+        const previousPageElement = document.getElementById(`story_page_${elementIdIndex-1}`);
+        const nowPageElement = document.getElementById(`story_page_${elementIdIndex}`);
+        previousPageElement.style.display = "flex";
+        nowPageElement.style.display = "none";
+    });
+});
+nextElements.forEach(function (e) {
+    e.addEventListener('click', function () {
+        const elementIdIndex = Number(e.id.split('_')[2]);
+        const nowPageElement = document.getElementById(`story_page_${elementIdIndex}`);
+        const nextPageElement = document.getElementById(`story_page_${elementIdIndex+1}`);
+        nextPageElement.style.display = "flex";
+        nowPageElement.style.display = "none";
+    });
+});
+hintElements.forEach(function (e) {
+    e.addEventListener('click', function () {
+        const elementIdIndex = Number(e.id.split('_')[2]);
+        const nowPageElement = document.getElementById(`story_page_${elementIdIndex}`);
+        const hintPageElement = document.getElementById(`story_page_${elementIdIndex}hint`);
+        hintPageElement.style.display = "flex";
+        nowPageElement.style.display = "none";
+    });
+});
+hintBackElements.forEach(function (e) {
+    e.addEventListener('click', function () {
+        const elementIdIndex = Number(e.id.split('_')[2].replace('hint',''));
+        const nowPageElement = document.getElementById(`story_page_${elementIdIndex}hint`);
+        const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
+        previousPageElement.style.display = "flex";
+        nowPageElement.style.display = "none";
+    });
+});
 
-story_page_2_close.addEventListener('click', function () {
-    story_page_2.style.display = "none";
-    bgmChange(1);
-})
-story_page_2_back.addEventListener('click', function () {
-    story_page_1.style.display = "flex";
-    story_page_2.style.display = "none";
-})
-story_page_2_next.addEventListener('click', function () {
-    story_page_3.style.display = "flex";
-    story_page_2.style.display = "none";
-})
-
-story_page_3_close.addEventListener('click', function () {
-    story_page_3.style.display = "none";
-    bgmChange(1);
-})
-story_page_3_back.addEventListener('click', function () {
-    story_page_2.style.display = "flex";
-    story_page_3.style.display = "none";
-})
 story_page_3_confirm.addEventListener('click', function () {
     var inputValue = story_page_3_input.value;
-    if (inputValue === "12512") {
+    if (true) {
+    //if (inputValue === "12512") {
         story_page_4.style.display = "flex";
         story_page_3.style.display = "none";
     } else {
         wrong_sound.play();
     }
 })
-story_page_3_hint.addEventListener('click', function () {
-    alert("힌트 리소스 없음");
-})
 
-story_page_4_close.addEventListener('click', function () {
-    story_page_4.style.display = "none";
-    bgmChange(1);
-})
-story_page_4_back.addEventListener('click', function () {
-    story_page_3.style.display = "flex";
-    story_page_4.style.display = "none";
-})
-story_page_4_next.addEventListener('click', function () {
-    story_page_5.style.display = "flex";
-    story_page_4.style.display = "none";
-})
-
-story_page_5_close.addEventListener('click', function () {
-    story_page_5.style.display = "none";
-    bgmChange(1);
-})
-story_page_5_back.addEventListener('click', function () {
-    story_page_4.style.display = "flex";
-    story_page_5.style.display = "none";
-})
-story_page_5_next.addEventListener('click', function () {
-    story_page_6.style.display = "flex";
-    story_page_5.style.display = "none";
-})
-
-story_page_6_close.addEventListener('click', function () {
-    story_page_6.style.display = "none";
-    bgmChange(1);
-})
-story_page_6_back.addEventListener('click', function () {
-    story_page_5.style.display = "flex";
-    story_page_6.style.display = "none";
-})
 story_page_6_confirm.addEventListener('click', function () {
     var inputValue = story_page_6_input.value;
-    if (inputValue === "LIFE") {
+    if (true) {
+    //if (inputValue === "LIFE") {
         story_page_7.style.display = "flex";
         story_page_6.style.display = "none";
     } else {
         wrong_sound.play();
     }
 })
-story_page_6_hint.addEventListener('click', function () {
-    alert("힌트 리소스 없음");
-})
 
-story_page_7_close.addEventListener('click', function () {
-    story_page_7.style.display = "none";
-    bgmChange(1);
-})
-story_page_7_back.addEventListener('click', function () {
-    story_page_6.style.display = "flex";
-    story_page_7.style.display = "none";
-})
-story_page_7_next.addEventListener('click', function () {
-    story_page_8.style.display = "flex";
-    story_page_7.style.display = "none";
-})
-
-story_page_8_close.addEventListener('click', function () {
-    story_page_8.style.display = "none";
-    bgmChange(1);
-})
-story_page_8_back.addEventListener('click', function () {
-    story_page_7.style.display = "flex";
-    story_page_8.style.display = "none";
-})
-story_page_8_next.addEventListener('click', function () {
-    story_page_9.style.display = "flex";
-    story_page_8.style.display = "none";
-})
-
-story_page_9_close.addEventListener('click', function () {
-    story_page_9.style.display = "none";
-    bgmChange(1);
-})
-story_page_9_back.addEventListener('click', function () {
-    story_page_8.style.display = "flex";
-    story_page_9.style.display = "none";
-})
 story_page_9_confirm.addEventListener('click', function () {
     var inputValue = story_page_9_input.value;
-    if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "mastermind") {
+    if (true) {
+    //if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "mastermind") {
         story_page_10.style.display = "flex";
         story_page_9.style.display = "none";
     } else {
         wrong_sound.play();
     }
 })
-story_page_9_hint.addEventListener('click', function () {
-    alert("힌트 리소스 없음");
-})
 
-story_page_10_close.addEventListener('click', function () {
-    story_page_10.style.display = "none";
-    bgmChange(1);
-})
-story_page_10_back.addEventListener('click', function () {
-    story_page_9.style.display = "flex";
-    story_page_10.style.display = "none";
-})
-story_page_10_next.addEventListener('click', function () {
-    story_page_11.style.display = "flex";
-    story_page_10.style.display = "none";
-})
-
-story_page_11_close.addEventListener('click', function () {
-    story_page_11.style.display = "none";
-    bgmChange(1);
-})
-story_page_11_back.addEventListener('click', function () {
-    story_page_10.style.display = "flex";
-    story_page_11.style.display = "none";
-})
 story_page_11_confirm.addEventListener('click', function () {
     var inputValue = story_page_11_input.value;
-    if (inputValue === "TRUTH" || inputValue === "Truth" || inputValue === "truth") {
+    if (true) {
+    //if (inputValue === "TRUTH" || inputValue === "Truth" || inputValue === "truth") {
         story_page_12.style.display = "flex";
         story_page_11.style.display = "none";
     } else {
         wrong_sound.play();
     }
 })
-story_page_11_hint.addEventListener('click', function () {
-    alert("힌트 리소스 없음");
-})
 
-story_page_12_close.addEventListener('click', function () {
-    story_page_12.style.display = "none";
-    bgmChange(1);
-})
-story_page_12_back.addEventListener('click', function () {
-    story_page_11.style.display = "flex";
-    story_page_12.style.display = "none";
-})
-story_page_12_next.addEventListener('click', function () {
-    story_page_13.style.display = "flex";
-    story_page_12.style.display = "none";
-})
-
-story_page_13_close.addEventListener('click', function () {
-    story_page_13.style.display = "none";
-    bgmChange(1);
-})
-story_page_13_back.addEventListener('click', function () {
-    story_page_12.style.display = "flex";
-    story_page_13.style.display = "none";
-})
 story_page_13_confirm.addEventListener('click', function () {
     var inputValue = story_page_13_input.value;
-    if (inputValue === "원액") {
+    if (true) {
+    //if (inputValue === "원액") {
         story_page_14.style.display = "flex";
         story_page_13.style.display = "none";
     } else {
         wrong_sound.play();
     }
 })
-story_page_13_hint.addEventListener('click', function () {
-    alert("힌트 리소스 없음");
-})
 
-story_page_14_close.addEventListener('click', function () {
-    story_page_14.style.display = "none";
-    bgmChange(1);
-})
-story_page_14_back.addEventListener('click', function () {
-    story_page_13.style.display = "flex";
-    story_page_14.style.display = "none";
-})
-story_page_14_next.addEventListener('click', function () {
-    story_page_15.style.display = "flex";
-    story_page_14.style.display = "none";
-})
-
-story_page_15_close.addEventListener('click', function () {
-    story_page_15.style.display = "none";
-    bgmChange(1);
-})
-story_page_15_back.addEventListener('click', function () {
-    story_page_14.style.display = "flex";
-    story_page_15.style.display = "none";
-})
 story_page_15_confirm.addEventListener('click', function () {
     var inputValue = story_page_15_input.value;
-    if (inputValue === "성물제어실") {
+    if (true) {
+    //if (inputValue === "성물제어실") {
         story_page_16.style.display = "flex";
         story_page_15.style.display = "none";
     } else {
         wrong_sound.play();
     }
 })
-story_page_15_hint.addEventListener('click', function () {
-    alert("힌트 리소스 없음");
-})
 
-story_page_16_close.addEventListener('click', function () {
-    story_page_16.style.display = "none";
-    bgmChange(1);
-})
-story_page_16_back.addEventListener('click', function () {
-    story_page_15.style.display = "flex";
-    story_page_16.style.display = "none";
-})
-story_page_16_next.addEventListener('click', function () {
-    story_page_17.style.display = "flex";
-    story_page_16.style.display = "none";
-})
-
-story_page_17_close.addEventListener('click', function () {
-    story_page_17.style.display = "none";
-    bgmChange(1);
-})
-story_page_17_back.addEventListener('click', function () {
-    story_page_16.style.display = "flex";
-    story_page_17.style.display = "none";
-})
-story_page_17_next.addEventListener('click', function () {
-    story_page_18.style.display = "flex";
-    story_page_17.style.display = "none";
-})
-
-story_page_18_close.addEventListener('click', function () {
-    story_page_18.style.display = "none";
-    bgmChange(1);
-})
-story_page_18_back.addEventListener('click', function () {
-    story_page_17.style.display = "flex";
-    story_page_18.style.display = "none";
-})
 story_page_18_confirm.addEventListener('click', function () {
     var inputValue = story_page_18_input.value;
-    if (inputValue === "ECHO") {
+    if (true) {
+    //if (inputValue === "ECHO") {
         story_page_19.style.display = "flex";
         story_page_18.style.display = "none";
     } else {
         wrong_sound.play();
     }
 })
-story_page_18_hint.addEventListener('click', function () {
-    alert("힌트 리소스 없음");
-})
 
-story_page_19_close.addEventListener('click', function () {
-    story_page_19.style.display = "none";
-    bgmChange(1);
-})
-story_page_19_back.addEventListener('click', function () {
-    story_page_18.style.display = "flex";
-    story_page_19.style.display = "none";
-})
 story_page_19_delete.addEventListener('click', function () {
     //alert("핑거 스냅 효과 리소스 없음");
 
