@@ -1,6 +1,6 @@
 @media screen and (min-width: 1000px) {
 	.display_none_background {
-		transform: scale(1.5);
+		transform: scale(1.2);
 	}
 }
 
@@ -286,7 +286,8 @@ body {
 	left: 305px;
 }
 #image1 {
-	width: 45px;
+	width: 46px;
+	height: 74px;
 	top: 0px;
 	left: 75px;
 	z-index: 1;
@@ -310,8 +311,9 @@ body {
 }
 #image4 {
 	width: 31px;
-	top: 30px;
-	left: 90px;
+	height: 15px;
+	top: 29.5px;
+	left: 89.5px;
 }
 
 #image_group3 {
@@ -374,6 +376,7 @@ body {
 }
 #image11 {
 	width: 45px;
+	height: 15px;
 	top: 60px;
 	left: 60px;
 	z-index: 1;
@@ -392,13 +395,14 @@ body {
 }
 #image13 {
 	width: 45px;
+	height: 59px;
 	top: 0px;
 	left: 0px;
 	z-index: 1;
 }
 #image14 {
 	width: 45px;
-	top: 60px;
+	top: 59px;
 	left: 0px;
 }
 
