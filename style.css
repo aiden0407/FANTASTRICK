@@ -1,3 +1,9 @@
+@media screen and (min-width: 1000px) {
+	.display_none_background {
+		transform: scale(1.5);
+	}
+}
+
 @media screen and (min-width: 640px) {
 	#mobile_warning {
 		display: none !important;
@@ -77,6 +83,7 @@ body {
 	width: 25px;
 	top: 25px;
 	right: 15px;
+	cursor: pointer;
 }
 
 .story_page_back,
@@ -85,6 +92,7 @@ body {
 	width: 65px;
 	bottom: 55px;
 	right: 105px;
+	cursor: pointer;
 }
 
 .story_page_next {
@@ -92,12 +100,14 @@ body {
 	width: 65px;
 	bottom: 55px;
 	right: 35px;
+	cursor: pointer;
 }
 
 .story_page_confirm,
 .story_page_hint {
 	position: absolute;
 	width: 65px;
+	cursor: pointer;
 }
 
 .input_box {
@@ -147,6 +157,7 @@ body {
 	width: 65px;
 	bottom: 66px;
 	right: 120px;
+	cursor: pointer;
 }
 
 #main_menu_background {
@@ -158,6 +169,7 @@ body {
 	width: 160px;
 	top: 120px;
 	left: 80px;
+	cursor: pointer;
 }
 
 #main_menu_button2 {
@@ -165,6 +177,7 @@ body {
 	width: 180px;
 	top: 150px;
 	right: 50px;
+	cursor: pointer;
 }
 
 #main_menu_button3 {
@@ -172,6 +185,7 @@ body {
 	width: 150px;
 	bottom: 75px;
 	left: 105px;
+	cursor: pointer;
 }
 
 #main_menu_button4 {
@@ -179,6 +193,7 @@ body {
 	width: 200px;
 	bottom: 70px;
 	right: 65px;
+	cursor: pointer;
 }
 
 @keyframes popup-animation {
@@ -211,6 +226,7 @@ body {
 	width: 25px;
 	top: 10px;
 	right: 10px;
+	cursor: pointer;
 }
 
 #main_menu_popup_confirm {
@@ -220,6 +236,7 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	cursor: pointer;
 }
 
 #story_page_3_input {
@@ -465,6 +482,7 @@ body {
 	width: 90px;
 	bottom: 88px;
 	right: 92px;
+	cursor: pointer;
 }
 
 .glitch {
@@ -669,6 +687,7 @@ body {
 	width: 25px;
 	top: 10px;
 	right: 10px;
+	cursor: pointer;
 }
 
 #story_page_popup_confirm {
@@ -678,4 +697,5 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	cursor: pointer;
 }
