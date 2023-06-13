@@ -212,15 +212,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     draggableImages.forEach(function (image) {
-        image.addEventListener('mousedown', mousedown);
-        image.addEventListener('mouseup', end);
-        image.addEventListener('mouseleave', end);
-
         image.addEventListener('touchstart', touchstart);
         image.addEventListener('touchmove', touchmove);
         image.addEventListener('touchend', end);
+        image.addEventListener('mousedown', mousedown);
     });
     document.addEventListener('mousemove', mousemove);
+    document.addEventListener('mouseup', end);
 });
 
 story_page_9_confirm.addEventListener('click', function () {
