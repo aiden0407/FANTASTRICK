@@ -152,7 +152,7 @@ function puzzleRefresh() {
 
 story_page_6_confirm.addEventListener('click', function () {
     var inputValue = story_page_6_input.value;
-    if (inputValue === "LIFE") {
+    if (inputValue === "LIFE" || inputValue === "Life" || inputValue === " life") {
         story_page_7.style.display = "flex";
         story_page_6.style.display = "none";
         puzzleRefresh();
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 story_page_9_confirm.addEventListener('click', function () {
     var inputValue = story_page_9_input.value;
-    if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "mastermind") {
+    if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "masterMind" || inputValue === "mastermind") {
         story_page_10.style.display = "flex";
         story_page_9.style.display = "none";
     } else {
@@ -262,7 +262,7 @@ story_page_15_confirm.addEventListener('click', function () {
 
 story_page_18_confirm.addEventListener('click', function () {
     var inputValue = story_page_18_input.value;
-    if (inputValue === "ECHO") {
+    if (inputValue === "ECHO" || inputValue === "Echo" || inputValue === "echo") {
         story_page_19.style.display = "flex";
         story_page_18.style.display = "none";
     } else {
