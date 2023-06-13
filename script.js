@@ -152,7 +152,7 @@ function puzzleRefresh() {
 
 story_page_6_confirm.addEventListener('click', function () {
     var inputValue = story_page_6_input.value;
-    if (inputValue === "LIFE" || inputValue === "Life" || inputValue === " life") {
+    if (inputValue === "LIFE" || inputValue === "Life" || inputValue === "life") {
         story_page_7.style.display = "flex";
         story_page_6.style.display = "none";
         puzzleRefresh();
@@ -179,11 +179,13 @@ document.addEventListener('DOMContentLoaded', function () {
         activeImageGroup = e.target.parentElement;
         initialX = e.clientX - activeImageGroup.offsetLeft;
         initialY = e.clientY - activeImageGroup.offsetTop;
+        activeImageGroup.style.zIndex = 2;
     }
     function touchstart(e) {
         activeImageGroup = e.target.parentElement;
         initialX = e.touches[0].clientX - activeImageGroup.offsetLeft;
         initialY = e.touches[0].clientY - activeImageGroup.offsetTop;
+        activeImageGroup.style.zIndex = 2;
     }
 
     function mousemove(e) {
@@ -205,6 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function end() {
+        activeImageGroup.style.zIndex = '';
         activeImageGroup = null;
     }
 
