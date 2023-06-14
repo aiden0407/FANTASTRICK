@@ -77,49 +77,75 @@ const closeElements = document.querySelectorAll('.story_page_close');
 const backElements = document.querySelectorAll('.story_page_back');
 const nextElements = document.querySelectorAll('.story_page_next');
 const hintElements = document.querySelectorAll('.story_page_hint');
+const hintCloseElements = document.querySelectorAll('.story_page_hint_close');
 const hintBackElements = document.querySelectorAll('.story_page_hint_back');
 closeElements.forEach(function (e) {
     e.addEventListener('click', function () {
-        pageElements.forEach(function (e) {
-            e.style.display = "none";
-        });
+        e.parentElement.style.display = "none";
         bgmChange(1);
     });
 });
 backElements.forEach(function (e) {
     e.addEventListener('click', function () {
-        const elementIdIndex = Number(e.id.split('_')[2]);
+        const elementIdIndex = Number(e.parentElement.id.split('_')[2]);
         const previousPageElement = document.getElementById(`story_page_${elementIdIndex-1}`);
-        const nowPageElement = document.getElementById(`story_page_${elementIdIndex}`);
         previousPageElement.style.display = "flex";
-        nowPageElement.style.display = "none";
+        e.parentElement.style.display = "none";
     });
 });
 nextElements.forEach(function (e) {
     e.addEventListener('click', function () {
-        const elementIdIndex = Number(e.id.split('_')[2]);
-        const nowPageElement = document.getElementById(`story_page_${elementIdIndex}`);
+        const elementIdIndex = Number(e.parentElement.id.split('_')[2]);
         const nextPageElement = document.getElementById(`story_page_${elementIdIndex+1}`);
         nextPageElement.style.display = "flex";
-        nowPageElement.style.display = "none";
+        e.parentElement.style.display = "none";
     });
 });
 hintElements.forEach(function (e) {
     e.addEventListener('click', function () {
-        const elementIdIndex = Number(e.id.split('_')[2]);
-        const nowPageElement = document.getElementById(`story_page_${elementIdIndex}`);
+        const elementIdIndex = Number(e.parentElement.id.split('_')[2]);
         const hintPageElement = document.getElementById(`story_page_${elementIdIndex}hint`);
+        hintPageElement.style.animation = "popup-animation 0.2s ease-in-out";
+        hintPageElement.style.zIndex = "5";
         hintPageElement.style.display = "flex";
-        nowPageElement.style.display = "none";
+    });
+});
+hintCloseElements.forEach(function (e) {
+    e.addEventListener('click', function () {
+        const elementIdIndex = Number(e.parentElement.id.split('_')[2].replace('hint',''));
+        const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
+        previousPageElement.style.display = "flex";
+
+        e.parentElement.style.transition = "transform 0.25s, opacity 0.25s";
+        e.parentElement.style.transform = "scale(0.4)";
+        e.parentElement.style.opacity = "0";
+
+        setTimeout(function () {
+            e.parentElement.style.display = "none";
+            e.parentElement.style.transform = "scale(1)";
+            e.parentElement.style.opacity = "1";
+            e.parentElement.style.transition = "";
+            e.parentElement.style.zIndex = "";
+        }, 250);
     });
 });
 hintBackElements.forEach(function (e) {
     e.addEventListener('click', function () {
-        const elementIdIndex = Number(e.id.split('_')[2].replace('hint',''));
-        const nowPageElement = document.getElementById(`story_page_${elementIdIndex}hint`);
+        const elementIdIndex = Number(e.parentElement.id.split('_')[2].replace('hint',''));
         const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
         previousPageElement.style.display = "flex";
-        nowPageElement.style.display = "none";
+
+        e.parentElement.style.transition = "transform 0.3s, opacity 0.3s";
+        e.parentElement.style.transform = "scale(0.5)";
+        e.parentElement.style.opacity = "0";
+
+        setTimeout(function () {
+            e.parentElement.style.display = "none";
+            e.parentElement.style.transform = "scale(1)";
+            e.parentElement.style.opacity = "1";
+            e.parentElement.style.transition = "";
+            e.parentElement.style.zIndex = "";
+        }, 300);
     });
 });
 
