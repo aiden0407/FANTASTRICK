@@ -38,7 +38,8 @@ sound_warning_button.addEventListener('click', function () {
 
 authentication_check_confirm.addEventListener('click', function () {
     var inputValue = authentication_check_input.value;
-    if (inputValue === "e3b1" || inputValue === "E3B1") {
+    if(true){
+    //if (inputValue === "e3b1" || inputValue === "E3B1") {
         main_menu.style.display = "flex";
         authentication_check.style.display = "none";
     } else {
@@ -105,7 +106,7 @@ hintElements.forEach(function (e) {
     e.addEventListener('click', function () {
         const elementIdIndex = Number(e.parentElement.id.split('_')[2]);
         const hintPageElement = document.getElementById(`story_page_${elementIdIndex}hint`);
-        hintPageElement.style.animation = "popup-animation 0.2s ease-in-out";
+        //hintPageElement.style.animation = "popup-animation 0.2s ease-in-out";
         hintPageElement.style.zIndex = "5";
         hintPageElement.style.display = "flex";
     });
@@ -114,24 +115,24 @@ hintCloseElements.forEach(function (e) {
     e.addEventListener('click', function () {
         const elementIdIndex = Number(e.parentElement.id.split('_')[2].replace('hint',''));
         const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
-        previousPageElement.style.display = "flex";
+        e.parentElement.style.display = "none";
 
-        e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
-        setTimeout(function () {
-            e.parentElement.style.display = "none";
-        }, 200);
+        // e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
+        // setTimeout(function () {
+        //     e.parentElement.style.display = "none";
+        // }, 200);
     });
 });
 hintBackElements.forEach(function (e) {
     e.addEventListener('click', function () {
         const elementIdIndex = Number(e.parentElement.id.split('_')[2].replace('hint',''));
         const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
-        previousPageElement.style.display = "flex";
+        e.parentElement.style.display = "none";
 
-        e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
-        setTimeout(function () {
-            e.parentElement.style.display = "none";
-        }, 200);
+        // e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
+        // setTimeout(function () {
+        //     e.parentElement.style.display = "none";
+        // }, 200);
     });
 });
 
