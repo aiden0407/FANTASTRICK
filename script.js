@@ -116,17 +116,10 @@ hintCloseElements.forEach(function (e) {
         const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
         previousPageElement.style.display = "flex";
 
-        e.parentElement.style.transition = "transform 0.25s, opacity 0.25s";
-        e.parentElement.style.transform = "scale(0.4)";
-        e.parentElement.style.opacity = "0";
-
+        e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
         setTimeout(function () {
             e.parentElement.style.display = "none";
-            e.parentElement.style.transform = "scale(1)";
-            e.parentElement.style.opacity = "1";
-            e.parentElement.style.transition = "";
-            e.parentElement.style.zIndex = "";
-        }, 250);
+        }, 200);
     });
 });
 hintBackElements.forEach(function (e) {
@@ -135,17 +128,10 @@ hintBackElements.forEach(function (e) {
         const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
         previousPageElement.style.display = "flex";
 
-        e.parentElement.style.transition = "transform 0.3s, opacity 0.3s";
-        e.parentElement.style.transform = "scale(0.5)";
-        e.parentElement.style.opacity = "0";
-
+        e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
         setTimeout(function () {
             e.parentElement.style.display = "none";
-            e.parentElement.style.transform = "scale(1)";
-            e.parentElement.style.opacity = "1";
-            e.parentElement.style.transition = "";
-            e.parentElement.style.zIndex = "";
-        }, 300);
+        }, 200);
     });
 });
 
@@ -193,7 +179,9 @@ story_page_6_back.addEventListener('click', function () {
     puzzleRefresh();
 });
 story_page_6_hint.addEventListener('click', function () {
-    puzzleRefresh();
+    setTimeout(function () {
+        puzzleRefresh();
+    }, 300);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -233,7 +221,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function end() {
-        activeImageGroup.style.zIndex = '';
+        if(activeImageGroup){
+            activeImageGroup.style.zIndex = '';
+        }
         activeImageGroup = null;
     }
 
