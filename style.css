@@ -78,7 +78,8 @@ body {
 	margin-top: 20px;
 }
 
-.story_page_close {
+.story_page_close,
+.story_page_hint_close {
 	position: absolute;
 	width: 25px;
 	top: 25px;
