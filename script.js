@@ -1,6 +1,5 @@
 function setViewportHeight() {
-    var bodyElement = document.querySelector("body");
-    bodyElement.style.height = window.innerHeight + "px";
+    document.body.style.height = window.innerHeight + "px";
 }
 window.addEventListener("load", setViewportHeight);
 window.addEventListener("resize", setViewportHeight);
@@ -11,6 +10,13 @@ function init() {
         e.setAttribute("autocomplete", "off");
     });
 }
+
+const images = document.getElementsByTagName('img');
+Array.from(images).forEach((image) => {
+  image.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+  });
+});
 
 function bgmChange(track) {
     main_bgm.loop = true;
@@ -31,6 +37,7 @@ function bgmChange(track) {
 }
 
 sound_warning_button.addEventListener('click', function () {
+    document.body.style.backgroundImage = "url('assets/BG.gif')";
     sound_warning.style.display = "none";
     authentication_check.style.display = "flex";
     bgmChange(1);
@@ -38,8 +45,8 @@ sound_warning_button.addEventListener('click', function () {
 
 authentication_check_confirm.addEventListener('click', function () {
     var inputValue = authentication_check_input.value;
-    if(true){
-    //if (inputValue === "e3b1" || inputValue === "E3B1") {
+    if (inputValue === "e3b1" || inputValue === "E3B1") {
+        click_sound.play();
         main_menu.style.display = "flex";
         authentication_check.style.display = "none";
     } else {
@@ -48,21 +55,27 @@ authentication_check_confirm.addEventListener('click', function () {
 })
 
 main_menu_button1.addEventListener('click', function () {
+    click_sound.play();
     alert("준비 중인 기능입니다.");
 })
 main_menu_button2.addEventListener('click', function () {
+    click_sound.play();
     main_menu_popup.style.display = "flex";
 })
 main_menu_button3.addEventListener('click', function () {
+    click_sound.play();
     alert("준비 중인 기능입니다.");
 })
 main_menu_button4.addEventListener('click', function () {
+    click_sound.play();
     alert("준비 중인 기능입니다.");
 })
 main_menu_popup_close.addEventListener('click', function () {
+    click_sound.play();
     main_menu_popup.style.display = "none";
 })
 main_menu_popup_confirm.addEventListener('click', function () {
+    click_sound.play();
     story_page_1.style.animation = "popup-animation 0.1s ease-in-out";
     story_page_1.style.display = "flex";
     main_menu_popup.style.display = "none";
@@ -82,12 +95,14 @@ const hintCloseElements = document.querySelectorAll('.story_page_hint_close');
 const hintBackElements = document.querySelectorAll('.story_page_hint_back');
 closeElements.forEach(function (e) {
     e.addEventListener('click', function () {
+        click_sound.play();
         e.parentElement.style.display = "none";
         bgmChange(1);
     });
 });
 backElements.forEach(function (e) {
     e.addEventListener('click', function () {
+        click_sound.play();
         const elementIdIndex = Number(e.parentElement.id.split('_')[2]);
         const previousPageElement = document.getElementById(`story_page_${elementIdIndex-1}`);
         previousPageElement.style.display = "flex";
@@ -96,6 +111,7 @@ backElements.forEach(function (e) {
 });
 nextElements.forEach(function (e) {
     e.addEventListener('click', function () {
+        click_sound.play();
         const elementIdIndex = Number(e.parentElement.id.split('_')[2]);
         const nextPageElement = document.getElementById(`story_page_${elementIdIndex+1}`);
         nextPageElement.style.display = "flex";
@@ -104,41 +120,28 @@ nextElements.forEach(function (e) {
 });
 hintElements.forEach(function (e) {
     e.addEventListener('click', function () {
+        click_sound.play();
         const elementIdIndex = Number(e.parentElement.id.split('_')[2]);
         const hintPageElement = document.getElementById(`story_page_${elementIdIndex}hint`);
-        //hintPageElement.style.animation = "popup-animation 0.2s ease-in-out";
+        hintPageElement.style.animation = "popup-animation 0.2s ease-in-out";
         hintPageElement.style.zIndex = "5";
         hintPageElement.style.display = "flex";
     });
 });
 hintCloseElements.forEach(function (e) {
     e.addEventListener('click', function () {
-        const elementIdIndex = Number(e.parentElement.id.split('_')[2].replace('hint',''));
-        const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
-        e.parentElement.style.display = "none";
-
-        // e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
-        // setTimeout(function () {
-        //     e.parentElement.style.display = "none";
-        // }, 200);
-    });
-});
-hintBackElements.forEach(function (e) {
-    e.addEventListener('click', function () {
-        const elementIdIndex = Number(e.parentElement.id.split('_')[2].replace('hint',''));
-        const previousPageElement = document.getElementById(`story_page_${elementIdIndex}`);
-        e.parentElement.style.display = "none";
-
-        // e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
-        // setTimeout(function () {
-        //     e.parentElement.style.display = "none";
-        // }, 200);
+        click_sound.play();
+        e.parentElement.style.animation = "popup-close-animation 0.25s ease-in-out";
+        setTimeout(function () {
+            e.parentElement.style.display = "none";
+        }, 200);
     });
 });
 
 story_page_3_confirm.addEventListener('click', function () {
     var inputValue = story_page_3_input.value;
     if (inputValue === "12512") {
+        click_sound.play();
         story_page_4.style.display = "flex";
         story_page_3.style.display = "none";
     } else {
@@ -166,6 +169,7 @@ function puzzleRefresh() {
 story_page_6_confirm.addEventListener('click', function () {
     var inputValue = story_page_6_input.value;
     if (inputValue === "LIFE" || inputValue === "Life" || inputValue === "life") {
+        click_sound.play();
         story_page_7.style.display = "flex";
         story_page_6.style.display = "none";
         puzzleRefresh();
@@ -241,6 +245,7 @@ document.addEventListener('DOMContentLoaded', function () {
 story_page_9_confirm.addEventListener('click', function () {
     var inputValue = story_page_9_input.value;
     if (inputValue === "MASTERMIND" || inputValue === "MasterMind" || inputValue === "masterMind" || inputValue === "mastermind") {
+        click_sound.play();
         story_page_10.style.display = "flex";
         story_page_9.style.display = "none";
     } else {
@@ -251,6 +256,7 @@ story_page_9_confirm.addEventListener('click', function () {
 story_page_11_confirm.addEventListener('click', function () {
     var inputValue = story_page_11_input.value;
     if (inputValue === "TRUTH" || inputValue === "Truth" || inputValue === "truth") {
+        click_sound.play();
         story_page_12.style.display = "flex";
         story_page_11.style.display = "none";
     } else {
@@ -261,6 +267,7 @@ story_page_11_confirm.addEventListener('click', function () {
 story_page_13_confirm.addEventListener('click', function () {
     var inputValue = story_page_13_input.value;
     if (inputValue === "원액") {
+        click_sound.play();
         story_page_14.style.display = "flex";
         story_page_13.style.display = "none";
     } else {
@@ -271,6 +278,7 @@ story_page_13_confirm.addEventListener('click', function () {
 story_page_15_confirm.addEventListener('click', function () {
     var inputValue = story_page_15_input.value;
     if (inputValue === "성물제어실") {
+        click_sound.play();
         story_page_16.style.display = "flex";
         story_page_15.style.display = "none";
     } else {
@@ -281,6 +289,7 @@ story_page_15_confirm.addEventListener('click', function () {
 story_page_18_confirm.addEventListener('click', function () {
     var inputValue = story_page_18_input.value;
     if (inputValue === "ECHO" || inputValue === "Echo" || inputValue === "echo") {
+        click_sound.play();
         story_page_19.style.display = "flex";
         story_page_18.style.display = "none";
     } else {
@@ -289,6 +298,7 @@ story_page_18_confirm.addEventListener('click', function () {
 })
 
 story_page_19_delete.addEventListener('click', function () {
+    click_sound.play();
     var glitchElement = document.querySelector('.glitch');
     glitchElement.classList.toggle('active');
 
@@ -316,9 +326,11 @@ story_page_19_delete.addEventListener('click', function () {
 })
 story_page_popup_close.addEventListener('click', function () {
     story_page_popup.style.display = "none";
+    click_sound.play();
     bgmChange(1);
 })
 story_page_popup_confirm.addEventListener('click', function () {
     story_page_popup.style.display = "none";
+    click_sound.play();
     bgmChange(1);
 })
