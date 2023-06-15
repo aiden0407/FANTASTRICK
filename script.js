@@ -311,8 +311,10 @@ story_page_19_delete.addEventListener('click', function () {
         gifContainer.style.display = "flex";
 
         setTimeout(function () {
+            gifImage.src = "";
             gifImage.src = "assets/hacker.gif";
             setTimeout(function () {
+                gifImage.src = "";
                 gifImage.src = "assets/turnOff.gif";
                 setTimeout(function () {
                     gifContainer.style.display = "none";
