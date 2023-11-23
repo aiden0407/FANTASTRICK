@@ -1,42 +1,4 @@
 window.onload = function () {
-    function preloadImages(array) {
-        if (!preloadImages.list) {
-            preloadImages.list = [];
-        }
-        var list = preloadImages.list;
-        for (var i = 0; i < array.length; i++) {
-            var img = new Image();
-            img.onload = function () {
-                var index = list.indexOf(this);
-                if (index !== -1) {
-                    list.splice(index, 1);
-                }
-            };
-            list.push(img);
-            img.src = array[i];
-        }
-    }
-    preloadImages([
-        "https://i.ibb.co/9s5X2bm/jarvis1.gif",
-        "https://i.ibb.co/mDW9K4D/jarvis2.gif",
-        "https://i.ibb.co/G7rTXqQ/bg-login.png",
-        "https://i.ibb.co/0tFg9jH/letter.png",
-        "https://i.ibb.co/zmwwLzL/bg-answer.png",
-        "https://i.ibb.co/4WcNn7r/bg-page.jpg",
-        "https://i.ibb.co/swnRMmP/object-play.jpg",
-        "https://i.ibb.co/SxsNgLx/bg-subpage.png",
-        "https://i.ibb.co/98WW3n6/rotate.png",
-        "http://fantastrick.co.kr/wp-content/uploads/2021/08/card.png",
-        "https://i.ibb.co/PMTDFKc/quiz2.png",
-        "https://i.ibb.co/0YY136f/quiz3.png",
-        "https://i.ibb.co/Vmvw78x/quiz4.png",
-        "https://i.ibb.co/z27wHgm/quiz6.png",
-        "https://i.ibb.co/TcWcVqd/quiz5.png",
-        "https://i.ibb.co/C7DVSxG/headphone.png",
-        "https://i.ibb.co/drbdydT/letter1.gif",
-        "https://i.ibb.co/TvYyMwy/letter2.png"
-    ]);
-
     var before_chk = document.querySelector("#before_chk");
     var ready = document.querySelector("#ready_btn");
     before_chk.style.opacity = "1";
@@ -73,26 +35,17 @@ bgm1.volume = 0.1;
 bgm2.volume = 0.1;
 
 function fadeOut(audio) {
-    // TweenMax.to(sym.$('music’), 5, {volume:.5});
-    //TweenMax.to($("#music"), 2, {volume:.1});
     TweenMax.to(audio, 1, { volume: 0.1 });
-    //audio.volume =.1;
     audio.volume = 0.1;
     audio.pause();
     audio.currentTime = 0;
-    //alert("caca");
 }
 
 function fadeIn(audio) {
     audio.volume = 0.1;
     audio.loop = true;
-    audio.play();
-    // TweenMax.to(sym.$('music’), 5, {volume:.5});
-    //TweenMax.to($("#music"), 2, {volume:.1});        
-    TweenMax.to(audio, 1, { volume: 0.6 });
-    //audio.volume =.1;
-
-    //alert("caca");
+    audio.play();    
+    TweenMax.to(audio, 1, { volume: 1 });
 }
 
 function move() {
@@ -208,7 +161,7 @@ function answerInput(a) {
                 page[p].style.display = "block";
                 countPage.innerHTML = p + 1;
             } else {
-                alert("마지막 페이지 입니다");
+                // alert("마지막 페이지 입니다");
             }
             input[a].value = "";
             document.querySelector(
@@ -309,7 +262,7 @@ function pageNext() {
                 page[p].style.display = "block";
                 countPage.innerHTML = p + 1;
             } else {
-                alert("마지막 페이지 입니다");
+                // alert("마지막 페이지 입니다");
             }
         }
     } else {
@@ -321,7 +274,7 @@ function pageNext() {
             page[p].style.display = "block";
             countPage.innerHTML = p + 1;
         } else {
-            alert("마지막 페이지 입니다");
+            // alert("마지막 페이지 입니다");
         }
     }
 }
@@ -334,7 +287,7 @@ function pagePrev() {
         page[p].style.display = "block";
         countPage.innerHTML = p + 1;
     } else {
-        alert("첫번째 페이지 입니다");
+        // alert("첫번째 페이지 입니다");
     }
 }
 
