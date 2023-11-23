@@ -641,3 +641,9 @@ a.menu_btn>span {
 input.answer-input {
 	z-index: 1000;
 }
+
+a {
+	-webkit-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
+	-ms-tap-highlight-color: transparent;
+}
