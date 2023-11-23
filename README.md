@@ -1,14 +1,10 @@
 # FANTASTRICK
 
-판타스트릭은 하이퍼 리얼리즘 방탈출을 추구합니다.
+[판타스트릭](http://fantastrick.co.kr/)은 하이퍼 리얼리즘 방탈출을 추구합니다.
 
 감동, 그 이상의 감동이 있는 방탈출 카페 판타스트릭.
 
-테마 설계 / 인테리어 / 특수 인테리어 / 장치 제작 및 기술 지원
-
-fantastrick@fantastrick.co.kr
-
-[판타스트릭 홈페이지](http://fantastrick.co.kr/)
+테마 설계 / 인테리어 / 특수 인테리어 / 장치 제작 및 기술 지원 fantastrick@fantastrick.co.kr
 
 ## FANTASTRICK 히든페이지
 
