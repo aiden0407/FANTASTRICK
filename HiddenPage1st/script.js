@@ -194,7 +194,7 @@ function closeIt() {
 }
 
 function soon() {
-    alert("곧 업데이트 됩니다. 기대해 주세요!");
+    window.location.href = '../';
 }
 
 function pageNext() {

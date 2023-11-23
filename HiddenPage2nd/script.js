@@ -67,8 +67,7 @@ main_menu_button3.addEventListener('click', function () {
     alert("준비 중인 기능입니다.");
 })
 main_menu_button4.addEventListener('click', function () {
-    click_sound.play();
-    alert("준비 중인 기능입니다.");
+    window.location.href = '../';
 })
 main_menu_popup_close.addEventListener('click', function () {
     click_sound.play();
