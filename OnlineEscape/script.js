@@ -218,7 +218,11 @@ jormungand_popup_confirm.addEventListener('click', function () {
 })
 answer1_1.addEventListener('click', function () {
     click_sound.play();
+    jormungand_page_1_1.style.display = "flex";
+    jormungand_page_1.style.display = "none";
 })
 answer1_2.addEventListener('click', function () {
     click_sound.play();
+    jormungand_page_1_2.style.display = "flex";
+    jormungand_page_1.style.display = "none";
 })
