@@ -19,6 +19,26 @@
 	}
 }
 
+@keyframes wrong-answer {
+	0%, 100% {
+	  background-color: transparent;
+	}
+	50% {
+	  background-color: #ff0000;
+	}
+}
+
+#wrong_effect {
+	display: none;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparent;
+	z-index: 999;
+	animation: wrong-answer 0.4s;
+	opacity: 0.2;
+}
+
 body {
 	background-repeat: repeat;
 	background-size: cover;

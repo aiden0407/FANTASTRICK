@@ -36,6 +36,14 @@ function bgmChange(track) {
     }
 }
 
+function wrong() {
+    wrong_sound.play();
+    wrong_effect.style.display = "flex";
+    setTimeout(function () {
+        wrong_effect.style.display = "none";
+    }, 400);
+}
+
 sound_warning_button.addEventListener('click', function () {
     document.body.style.backgroundImage = "url('assets/BG.gif')";
     sound_warning.style.display = "none";
@@ -50,7 +58,7 @@ authentication_check_confirm.addEventListener('click', function () {
         main_menu.style.display = "flex";
         authentication_check.style.display = "none";
     } else {
-        wrong_sound.play();
+        wrong();
     }
 })
 
@@ -144,7 +152,7 @@ story_page_3_confirm.addEventListener('click', function () {
         story_page_4.style.display = "flex";
         story_page_3.style.display = "none";
     } else {
-        wrong_sound.play();
+        wrong();
     }
 })
 
@@ -173,7 +181,7 @@ story_page_6_confirm.addEventListener('click', function () {
         story_page_6.style.display = "none";
         puzzleRefresh();
     } else {
-        wrong_sound.play();
+        wrong();
     }
 })
 story_page_6_close.addEventListener('click', function () {
@@ -248,7 +256,7 @@ story_page_9_confirm.addEventListener('click', function () {
         story_page_10.style.display = "flex";
         story_page_9.style.display = "none";
     } else {
-        wrong_sound.play();
+        wrong();
     }
 })
 
@@ -259,7 +267,7 @@ story_page_11_confirm.addEventListener('click', function () {
         story_page_12.style.display = "flex";
         story_page_11.style.display = "none";
     } else {
-        wrong_sound.play();
+        wrong();
     }
 })
 
@@ -270,7 +278,7 @@ story_page_13_confirm.addEventListener('click', function () {
         story_page_14.style.display = "flex";
         story_page_13.style.display = "none";
     } else {
-        wrong_sound.play();
+        wrong();
     }
 })
 
@@ -281,7 +289,7 @@ story_page_15_confirm.addEventListener('click', function () {
         story_page_16.style.display = "flex";
         story_page_15.style.display = "none";
     } else {
-        wrong_sound.play();
+        wrong();
     }
 })
 
@@ -292,7 +300,7 @@ story_page_18_confirm.addEventListener('click', function () {
         story_page_19.style.display = "flex";
         story_page_18.style.display = "none";
     } else {
-        wrong_sound.play();
+        wrong();
     }
 })
 
