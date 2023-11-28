@@ -39,7 +39,6 @@
 
 body {
     background-image: url('assets/bg1.png');
-    /* background-image: url('assets/bg2.gif'); */
 	background-repeat: repeat !important;
 	background-size: cover;
     background-position: center;
@@ -108,7 +107,7 @@ body {
 	  background-color: transparent;
 	}
 	50% {
-	  background-color: #ff0000; /* 붉은 색 배경 */
+	  background-color: #ff0000;
 	}
 }
 
@@ -123,7 +122,7 @@ body {
 	opacity: 0.2;
 }
 
-/* 로그인 이전 파트 */
+/* 로그인 파트 */
 .login_title {
 	width: 510px;
 }
@@ -231,7 +230,7 @@ body {
 	cursor: pointer;
 }
 
-/* 로그인 이후 파트 */
+/* 카인 파트 */
 #scifi_login {
 	position: relative;
 	width: 100vw;
@@ -419,3 +418,5 @@ body {
 	right: 10px;
 	cursor: pointer;
 }
+
+/* 요르문간드 파트 */
