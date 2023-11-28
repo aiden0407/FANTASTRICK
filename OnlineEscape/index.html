@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>FANTASTRICK UNIVERSE</title>
+    <meta name="description" content="판타스트릭 방탈출 - 온라인 히든페이지">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FANTASTRICK UNIVERSE">
+    <meta property="og:description" content="판타스트릭 방탈출 - 온라인 히든페이지">
+    <!-- <meta property="og:image" content="assets/ogImage.png"> -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body onload="init()">
+    <!-- Hits 카운터 -->
+    <!-- <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2Fhidden.fantastrick.co.kr%2FOnlineEscape&count_bg=%23CF1919&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=온라인 방탈출 페이지&edge_flat=false" style="display: none;"> -->
+    <!-- Hits 카운터 End -->
+
+    <!-- 모바일 세로화면 경고 -->
+    <div class="background" id="mobile_warning">
+        <img id="mobile_warning_image" src="https://i.ibb.co/98WW3n6/rotate.png" alt="스마트폰 가로 회전" /><br />
+        <p>본 페이지는 가로 화면에 최적화 되어있습니다.</p>
+        <p>스마트폰을 가로로 돌려서 사용해 주세요.</p>
+    </div>
+    <!-- 모바일 세로화면 경고 End -->
+
+    <!-- BGM Assets -->
+    <div id="sound">
+        <audio id="wrong_sound" src="../assets/wrong.mp3"></audio>
+        <audio id="click_sound" src="../assets/click.mp3"></audio>
+    </div>
+    <!-- BGM Assets End -->
+
+    <!-- 로그인 이전 파트 -->
+    <div class="display_none_background" id="login">
+        <img class="login_title" src="assets/login_1.png" alt="로그인 타이틀" />
+
+        <div class="login_page" id="login_page_1">
+            <img class="login_page_context" src="assets/login_1-1.png" alt="로그인 페이지1" />
+            <img class="login_page_next" src="assets/login_next_button.png" alt="NEXT" />
+        </div>
+
+        <div class="login_page" id="login_page_2">
+            <img class="login_page_context" src="assets/login_1-2.png" alt="로그인 페이지2" />
+            <img id="eden_button" src="assets/login_1-2-eden_button.png" alt="에덴거리" />
+            <img id="abel_button" src="assets/login_1-2-abel_button.png" alt="아벨연구소" />
+            <img class="login_page_back" src="assets/login_back_button.png" alt="BACK" />
+            <img class="login_page_next" src="assets/login_next_button.png" alt="NEXT" />
+        </div>
+
+        <div class="login_page" id="login_page_3">
+            <img class="login_page_context" src="assets/login_1-3.png" alt="로그인 페이지3" />
+            <img id="here_button_1" src="assets/login_1-3-here_button.png" alt="여기" />
+            <img id="here_button_2" src="assets/login_1-3-here_button.png" alt="여기" />
+            <input type="text" class="input_box" id="login_input" />
+            <img id="login_enter" src="assets/login_1-3-enter_button.png" alt="입력" />
+            <img class="login_page_back" src="assets/login_back_button.png" alt="BACK" />
+        </div>
+
+        <div id="login_hint">
+            <img id="login_hint_popup" src="assets/login_1-3_popup.png" alt="로그인 힌트 팝업" />
+            <img id="login_hint_close" src="assets/login_1-3-x_button.png" alt="X" />
+        </div>
+    </div>
+    <!-- 로그인 이전 파트 End -->
+
+    <!-- 로그인 이후 파트 -->
+    <div class="display_none_background" id="jormungand">
+
+    </div>
+    <!-- 로그인 이후 파트 End -->
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
