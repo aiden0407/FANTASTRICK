@@ -22,7 +22,7 @@
 
 #mobile_warning {
 	background-color: #000;
-	z-index: 9999;
+	z-index: 999;
 }
 
 #mobile_warning_image {
@@ -117,7 +117,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-color: transparent;
-	z-index: 10000;
+	z-index: 999;
 	animation: wrong-answer 0.4s;
 	opacity: 0.2;
 }
