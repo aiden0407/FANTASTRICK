@@ -1,0 +1,188 @@
+/* 공통 부분 */
+@media screen and (min-width: 1000px) {
+	.display_none_background {
+		transform: scale(1.5);
+	}
+}
+
+@media screen and (min-width: 640px) {
+	#mobile_warning {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.display_none_background {
+		display: none !important;
+	}
+	body {
+		background-image: none !important;
+	}
+}
+
+#mobile_warning {
+	background-color: #000;
+	z-index: 9999;
+}
+
+#mobile_warning_image {
+	width: 50vw;
+}
+
+.input_box {
+	position: absolute;
+	background-color: transparent;
+	/* border: none; */
+	color: #fff;
+	padding-left: 8px;
+}
+
+body {
+    background-image: url('assets/bg1.png');
+	background-repeat: repeat !important;
+	background-size: cover;
+    background-position: center;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	padding-top: env(safe-area-inset-top);
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+.background {
+	position: absolute;
+	width: 100vw;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
+	gap: 10px;
+}
+
+.display_none_background {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+    display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#login {
+	display: flex;
+}
+
+@keyframes popup-animation {
+	0% {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes popup-close-animation {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.4);
+	}
+}
+
+/* 로그인 이전 파트 */
+.login_title {
+	width: 510px;
+}
+
+.login_page {
+	position: relative;
+	display: none;
+	margin-top: 10px;
+}
+
+#login_page_1 {
+	display: flex;
+}
+
+.login_page_context {
+	width: 510px;
+}
+
+.login_page_back {
+	position: absolute;
+	width: 80px;
+	bottom: 4px;
+	left: 10px;
+	cursor: pointer;
+}
+
+.login_page_next {
+	position: absolute;
+	width: 80px;
+	bottom: 4px;
+	right: 6px;
+	cursor: pointer;
+}
+
+#here_button_2 {
+	position: absolute;
+	width: 50px;
+	top: 55px;
+	left: 308px;
+	cursor: pointer;
+}
+
+#login_enter {
+	position: absolute;
+	width: 80px;
+	bottom: 29px;
+	right: 115px;
+	cursor: pointer;
+}
+
+#login_input {
+	position: absolute;
+	width: 150px;
+	height: 20px;
+	bottom: 38.5px;
+	left: 137px;
+	cursor: pointer;
+}
+
+#login_hint {
+	position: absolute;
+	display: none;
+	width: 550px;
+	height: 300px;
+}
+
+#login_hint_popup {
+	position: absolute;
+	width: 550px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#login_hint_close {
+	position: absolute;
+	width: 30px;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+/* 로그인 이후 파트 */
