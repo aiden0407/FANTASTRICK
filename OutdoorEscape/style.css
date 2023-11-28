@@ -102,7 +102,27 @@ body {
 	}
 }
 
-/* 로그인 이전 파트 */
+@keyframes wrong-answer {
+	0%, 100% {
+	  background-color: transparent;
+	}
+	50% {
+	  background-color: #ff0000;
+	}
+}
+
+#wrong_effect {
+	display: none;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparent;
+	z-index: 10000;
+	animation: wrong-answer 0.4s;
+	opacity: 0.2;
+}
+
+/* 로그인 파트 */
 .login_title {
 	width: 510px;
 }
@@ -185,4 +205,4 @@ body {
 	cursor: pointer;
 }
 
-/* 로그인 이후 파트 */
+/* 카인 파트 */

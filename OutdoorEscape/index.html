@@ -25,6 +25,15 @@
     <!-- <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2Fhidden.fantastrick.co.kr%2FOnlineEscape&count_bg=%23CF1919&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=온라인 방탈출 페이지&edge_flat=false" style="display: none;"> -->
     <!-- Hits 카운터 End -->
 
+    <!-- BGM Assets -->
+    <div id="sound">
+        <audio loop id="main_bgm" src="../assets/mainBGM.mp3"></audio>
+        <audio loop id="story_bgm" src="../assets/storyBGM.mp3"></audio>
+        <audio id="wrong_sound" src="../assets/wrong.mp3"></audio>
+        <audio id="click_sound" src="../assets/click.mp3"></audio>
+    </div>
+    <!-- BGM Assets End -->
+
     <!-- 모바일 세로화면 경고 -->
     <div class="background" id="mobile_warning">
         <img id="mobile_warning_image" src="https://i.ibb.co/98WW3n6/rotate.png" alt="스마트폰 가로 회전" /><br />
@@ -33,14 +42,11 @@
     </div>
     <!-- 모바일 세로화면 경고 End -->
 
-    <!-- BGM Assets -->
-    <div id="sound">
-        <audio id="wrong_sound" src="../assets/wrong.mp3"></audio>
-        <audio id="click_sound" src="../assets/click.mp3"></audio>
-    </div>
-    <!-- BGM Assets End -->
+    <!-- 틀렸을 때 애니메이션 -->
+    <div id="wrong_effect"></div>
+    <!-- 틀렸을 때 애니메이션 End -->
 
-    <!-- 로그인 이전 파트 -->
+    <!-- 로그인 파트 -->
     <div class="display_none_background" id="login">
         <img class="login_title" src="assets/login_1.png" alt="로그인 타이틀" />
 
@@ -68,13 +74,13 @@
             <img id="login_hint_close" src="assets/login_1-3-x_button.png" alt="X" />
         </div>
     </div>
-    <!-- 로그인 이전 파트 End -->
+    <!-- 로그인 파트 End -->
 
-    <!-- 로그인 이후 파트 -->
-    <div class="display_none_background" id="jormungand">
+    <!-- 카인 파트 -->
+    <div class="display_none_background" id="cain">
 
     </div>
-    <!-- 로그인 이후 파트 End -->
+    <!-- 카인 파트 End -->
 
     <script type="text/javascript" src="script.js"></script>
 </body>

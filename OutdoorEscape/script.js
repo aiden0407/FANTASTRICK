@@ -19,6 +19,32 @@ Array.from(images).forEach((image) => {
   });
 });
 
+function bgmChange(track) {
+    main_bgm.loop = true;
+    story_bgm.loop = true;
+
+    if (track === 1) {
+        story_bgm.pause();
+        main_bgm.currentTime = 0;
+        main_bgm.play();
+    } else if (track === 2) {
+        main_bgm.pause();
+        story_bgm.currentTime = 0;
+        story_bgm.play();
+    } else {
+        main_bgm.pause();
+        story_bgm.pause();
+    }
+}
+
+function wrong() {
+    wrong_sound.play();
+    wrong_effect.style.display = "flex";
+    setTimeout(function () {
+        wrong_effect.style.display = "none";
+    }, 400);
+}
+
 // 로그인 이전 파트
 const loginBackElements = document.querySelectorAll('.login_page_back');
 const loginNextElements = document.querySelectorAll('.login_page_next');
@@ -50,13 +76,18 @@ login_hint_close.addEventListener('click', function () {
 })
 login_enter.addEventListener('click', function () {
     var inputValue = login_input.value;
-    // if (inputValue === "7934") {
+    if (inputValue === "7934") {
         document.body.style.backgroundImage = "url('assets/bg2.gif')";
-        jormungand.style.display = "flex";
+        cain.style.display = "flex";
         login.style.display = "none";
-    // } else {
-    //     wrong_sound.play();
-    // }
+        // bgmChange(1);
+        setTimeout(function () {
+            scifi_login_message.style.animation = "slideIn 0.25s ease-out";
+            scifi_login_message.style.display = "flex";
+        }, 500);
+    } else {
+        wrong();
+    }
 })
 
 // 로그인 이후 파트
