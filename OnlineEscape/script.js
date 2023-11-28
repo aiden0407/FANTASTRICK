@@ -85,7 +85,7 @@ login_hint_close.addEventListener('click', function () {
 })
 login_enter.addEventListener('click', function () {
     var inputValue = login_input.value;
-    if (inputValue === "7934") {
+    // if (inputValue === "7934") {
         document.body.style.backgroundImage = "url('assets/bg2.gif')";
         cain.style.display = "flex";
         login.style.display = "none";
@@ -94,9 +94,9 @@ login_enter.addEventListener('click', function () {
             scifi_login_message.style.animation = "slideIn 0.25s ease-out";
             scifi_login_message.style.display = "flex";
         }, 500);
-    } else {
-        wrong();
-    }
+    // } else {
+    //     wrong();
+    // }
 })
 
 // 카인 파트
@@ -117,8 +117,8 @@ cain_message_hint_close.addEventListener('click', function () {
         cain_message_next.style.display = "flex";
         scifi_login_hint_button.style.display = "flex";
         scifi_login_message.style.display = "flex";
-        cain_message_img1.style.display = "none";
-        cain_message_img2.style.display = "none";
+        cain_message_img1_button.style.display = "none";
+        cain_message_img2_button.style.display = "none";
     }, 200);
 })
 cain_message_next.addEventListener('click', function () {
@@ -130,8 +130,8 @@ cain_message_next.addEventListener('click', function () {
     cain_message_back.style.display = "flex";
     if (index===4) {
         cain_message_next.style.display = "none";
-        cain_message_img1.style.display = "flex";
-        cain_message_img2.style.display = "flex";
+        cain_message_img1_button.style.display = "flex";
+        cain_message_img2_button.style.display = "flex";
     }
 })
 cain_message_back.addEventListener('click', function () {
@@ -141,17 +141,27 @@ cain_message_back.addEventListener('click', function () {
     const index = Number(fileName.match(/(\d+)/)[0]);
     cain_message_hint_popup.src = `assets/cain_message_${index-1}.png`;
     cain_message_next.style.display = "flex";
-    cain_message_img1.style.display = "none";
-    cain_message_img2.style.display = "none";
+    cain_message_img1_button.style.display = "none";
+    cain_message_img2_button.style.display = "none";
     if (index===2) {
         cain_message_back.style.display = "none";
     }
 })
+cain_message_img1_button.addEventListener('click', function () {
+    click_sound.play();
+    cain_message_img1.style.display = "flex";
+})
 cain_message_img1.addEventListener('click', function () {
     click_sound.play();
+    cain_message_img1.style.display = "none";
+})
+cain_message_img2_button.addEventListener('click', function () {
+    click_sound.play();
+    cain_message_img2.style.display = "flex";
 })
 cain_message_img2.addEventListener('click', function () {
     click_sound.play();
+    cain_message_img2.style.display = "none";
 })
 
 scifi_login_hint_button.addEventListener('click', function () {
@@ -176,24 +186,39 @@ scifi_login_hint_close.addEventListener('click', function () {
 scifi_login_next.addEventListener('click', function () {
     click_sound.play();
     scifi_login_hint_popup.src = "assets/cain_message_answer.png";
-    scifi_login_next.style.display = "none";
     scifi_login_back.style.display = "flex";
+    scifi_login_next.style.display = "none";
 })
 scifi_login_back.addEventListener('click', function () {
     click_sound.play();
     scifi_login_hint_popup.src = "assets/cain_message_hint.png";
-    scifi_login_back.style.display = "none";
     scifi_login_next.style.display = "flex";
+    scifi_login_back.style.display = "none";
 })
 scifi_login_enter.addEventListener('click', function () {
     var inputValue = scifi_login_input.value;
-    if (inputValue === "JORMUNGAND" || inputValue === "Jormungand" || inputValue === "jormungand" || inputValue === "요르문간드") {
+    // if (inputValue === "JORMUNGAND" || inputValue === "Jormungand" || inputValue === "jormungand" || inputValue === "요르문간드") {
         click_sound.play();
         jormungand.style.display = "flex";
         cain.style.display = "none";
-    } else {
-        wrong();
-    }
+        setTimeout(function () {
+            jormungand_popup.style.display = "flex";
+        }, 500);
+        // bgmChange(2);
+    // } else {
+    //     wrong();
+    // }
 })
 
 // 요르문간드 파트
+jormungand_popup_confirm.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_1.style.display = "flex";
+    jormungand_page_0.style.display = "none";
+})
+answer1_1.addEventListener('click', function () {
+    click_sound.play();
+})
+answer1_2.addEventListener('click', function () {
+    click_sound.play();
+})

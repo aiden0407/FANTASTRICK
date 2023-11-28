@@ -100,8 +100,16 @@
             <img id="cain_message_hint_close" src="assets/cain_message_x_button.png" alt="X" />
             <img id="cain_message_back" src="assets/cain_message_back_button.png" alt="BACK" />
             <img id="cain_message_next" src="assets/cain_message_next_button.png" alt="NEXT" />
-            <div id="cain_message_img1"></div>
-            <div id="cain_message_img2"></div>
+            <div id="cain_message_img1_button"></div>
+            <div id="cain_message_img2_button"></div>
+        </div>
+
+        <div class="cain_message_img" id="cain_message_img1">
+            <img class="cain_message_img_context" id="cain_message_img1_context" src="assets/cain_message_letter.png" alt="카인의 편지" />
+        </div>
+
+        <div class="cain_message_img" id="cain_message_img2">
+            <img class="cain_message_img_context" id="cain_message_img2_context" src="assets/cain_message_sign.png" alt="카인의 편지" />
         </div>
 
         <div id="scifi_login_hint">
@@ -113,11 +121,25 @@
     </div>
     <!-- 카인 파트 End -->
 
-    <!-- 로그인 파트 -->
+    <!-- 요르문간드 파트 -->
     <div class="display_none_background" id="jormungand">
-        <img class="jormungand_title" src="assets/jor_title.png" alt="로그인 타이틀" />
+        <img class="jormungand_background" src="assets/jor_bg2.png" alt="요르문간드 배경" />
+        <img class="jormungand_title" src="assets/jor_title.png" alt="요르문간드 타이틀" />
+
+        <div class="jormungand_page"  id="jormungand_page_0">
+            <div id="jormungand_popup">
+                <img id="jormungand_popup_context" src="assets/jor_popup.png" alt="요르문간드 팝업" />
+                <img id="jormungand_popup_confirm" src="assets/jor_enter.png" alt="수락" />
+            </div>
+        </div>
+
+        <div class="jormungand_page" id="jormungand_page_1">
+            <img class="jormungand_page_context" src="assets/jor_echo_1.png" alt="요르문간드 페이지1" />
+            <img class="jormungand_page_answer" id="answer1_1" src="assets/jor_echo_1answer1.png" alt="선택지 1-1" />
+            <img class="jormungand_page_answer" id="answer1_2" src="assets/jor_echo_1answer2.png" alt="선택지 1-2" />
+        </div>
     </div>
-    <!-- 로그인 파트 End -->
+    <!-- 요르문간드 파트 End -->
 
     <script type="text/javascript" src="script.js"></script>
 </body>

@@ -301,7 +301,7 @@ body {
 	to {
 	  transform: translateX(0);
 	}
-  }
+}
 
 #scifi_login_message_context {
 	width: 300px;
@@ -355,7 +355,7 @@ body {
 	cursor: pointer;
 }
 
-#cain_message_img1 {
+#cain_message_img1_button {
 	display: none;
 	position: absolute;
 	width: 274px;
@@ -363,11 +363,11 @@ body {
 	top: 52px;
 	left: 16px;
 	cursor: pointer;
-	background: tomato;
-	opacity: 0.3;
+	/* background: tomato;
+	opacity: 0.3; */
 }
 
-#cain_message_img2 {
+#cain_message_img2_button {
 	display: none;
 	position: absolute;
 	width: 238px;
@@ -375,8 +375,30 @@ body {
 	top: 52px;
 	right: 28px;
 	cursor: pointer;
-	background: aqua;
-	opacity: 0.3;
+	/* background: aqua;
+	opacity: 0.3; */
+}
+
+.cain_message_img{
+	display: none;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000000;
+	z-index: 99;
+	justify-content: center;
+	align-items: center;
+}
+
+.cain_message_img_context{
+	height: 100vh;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+	.cain_message_img_context {
+		height: 66.666vh;
+	}
 }
 
 #scifi_login_hint {
@@ -420,3 +442,70 @@ body {
 }
 
 /* 요르문간드 파트 */
+.jormungand_background {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
+
+.jormungand_title {
+	width: 667px;
+	height: 54px;
+	object-fit: cover;
+}
+
+.jormungand_page {
+	position: relative;
+	width: 630px;
+	height: 287px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#jormungand_page_0 {
+	display: flex;
+}
+
+#jormungand_popup {
+	display: none;
+	animation: popup-animation 0.2s ease-in-out;
+	width: 460px;
+	height: 287px;
+}
+
+#jormungand_popup_context {
+	position: absolute;
+	width: 460px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#jormungand_popup_confirm {
+	position: absolute;
+	width: 160px;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.jormungand_page_context {
+	width: 630px;
+}
+
+.jormungand_page_answer {
+	position: absolute;
+	height: 45px;
+	cursor: pointer;
+}
+
+#answer1_1 {
+	bottom: 80px;
+}
+
+#answer1_2 {
+	bottom: 30px;
+}
