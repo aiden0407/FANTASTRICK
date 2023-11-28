@@ -19,7 +19,33 @@ Array.from(images).forEach((image) => {
   });
 });
 
-// 로그인 이전 파트
+function bgmChange(track) {
+    main_bgm.loop = true;
+    story_bgm.loop = true;
+
+    if (track === 1) {
+        story_bgm.pause();
+        main_bgm.currentTime = 0;
+        main_bgm.play();
+    } else if (track === 2) {
+        main_bgm.pause();
+        story_bgm.currentTime = 0;
+        story_bgm.play();
+    } else {
+        main_bgm.pause();
+        story_bgm.pause();
+    }
+}
+
+function wrong() {
+    wrong_sound.play();
+    wrong_effect.style.display = "flex";
+    setTimeout(function () {
+        wrong_effect.style.display = "none";
+    }, 400);
+}
+
+// 로그인 파트
 const loginBackElements = document.querySelectorAll('.login_page_back');
 const loginNextElements = document.querySelectorAll('.login_page_next');
 loginBackElements.forEach(function (e) {
@@ -59,13 +85,115 @@ login_hint_close.addEventListener('click', function () {
 })
 login_enter.addEventListener('click', function () {
     var inputValue = login_input.value;
-    // if (inputValue === "7934") {
+    if (inputValue === "7934") {
         document.body.style.backgroundImage = "url('assets/bg2.gif')";
-        jormungand.style.display = "flex";
+        cain.style.display = "flex";
         login.style.display = "none";
-    // } else {
-    //     wrong_sound.play();
-    // }
+        // bgmChange(1);
+        setTimeout(function () {
+            scifi_login_message.style.animation = "slideIn 0.25s ease-out";
+            scifi_login_message.style.display = "flex";
+        }, 500);
+    } else {
+        wrong();
+    }
 })
 
-// 로그인 이후 파트
+// 카인 파트
+scifi_login_message_confirm.addEventListener('click', function () {
+    click_sound.play();
+    cain_message_hint.style.animation = "popup-animation 0.1s ease-in-out";
+    cain_message_hint.style.display = "flex";
+    scifi_login_hint_button.style.display = "none";
+    scifi_login_message.style.display = "none";
+})
+cain_message_hint_close.addEventListener('click', function () {
+    click_sound.play();
+    cain_message_hint.style.animation = "popup-close-animation 0.25s ease-in-out";
+    setTimeout(function () {
+        cain_message_hint.style.display = "none";
+        cain_message_hint_popup.src = "assets/cain_message_1.png";
+        cain_message_back.style.display = "none";
+        cain_message_next.style.display = "flex";
+        scifi_login_hint_button.style.display = "flex";
+        scifi_login_message.style.display = "flex";
+        cain_message_img1.style.display = "none";
+        cain_message_img2.style.display = "none";
+    }, 200);
+})
+cain_message_next.addEventListener('click', function () {
+    click_sound.play();
+    const urlString = cain_message_hint_popup.src;
+    const fileName = urlString.split('/').pop();
+    const index = Number(fileName.match(/(\d+)/)[0]);
+    cain_message_hint_popup.src = `assets/cain_message_${index+1}.png`;
+    cain_message_back.style.display = "flex";
+    if (index===4) {
+        cain_message_next.style.display = "none";
+        cain_message_img1.style.display = "flex";
+        cain_message_img2.style.display = "flex";
+    }
+})
+cain_message_back.addEventListener('click', function () {
+    click_sound.play();
+    const urlString = cain_message_hint_popup.src;
+    const fileName = urlString.split('/').pop();
+    const index = Number(fileName.match(/(\d+)/)[0]);
+    cain_message_hint_popup.src = `assets/cain_message_${index-1}.png`;
+    cain_message_next.style.display = "flex";
+    cain_message_img1.style.display = "none";
+    cain_message_img2.style.display = "none";
+    if (index===2) {
+        cain_message_back.style.display = "none";
+    }
+})
+cain_message_img1.addEventListener('click', function () {
+    click_sound.play();
+})
+cain_message_img2.addEventListener('click', function () {
+    click_sound.play();
+})
+
+scifi_login_hint_button.addEventListener('click', function () {
+    click_sound.play();
+    scifi_login_hint.style.animation = "popup-animation 0.1s ease-in-out";
+    scifi_login_hint.style.display = "flex";
+    scifi_login_hint_button.style.display = "none";
+    scifi_login_message.style.display = "none";
+})
+scifi_login_hint_close.addEventListener('click', function () {
+    click_sound.play();
+    scifi_login_hint.style.animation = "popup-close-animation 0.25s ease-in-out";
+    setTimeout(function () {
+        scifi_login_hint.style.display = "none";
+        scifi_login_hint_popup.src = "assets/cain_message_hint.png";
+        scifi_login_back.style.display = "none";
+        scifi_login_next.style.display = "flex";
+        scifi_login_hint_button.style.display = "flex";
+        scifi_login_message.style.display = "flex";
+    }, 200);
+})
+scifi_login_next.addEventListener('click', function () {
+    click_sound.play();
+    scifi_login_hint_popup.src = "assets/cain_message_answer.png";
+    scifi_login_next.style.display = "none";
+    scifi_login_back.style.display = "flex";
+})
+scifi_login_back.addEventListener('click', function () {
+    click_sound.play();
+    scifi_login_hint_popup.src = "assets/cain_message_hint.png";
+    scifi_login_back.style.display = "none";
+    scifi_login_next.style.display = "flex";
+})
+scifi_login_enter.addEventListener('click', function () {
+    var inputValue = scifi_login_input.value;
+    if (inputValue === "JORMUNGAND" || inputValue === "Jormungand" || inputValue === "jormungand" || inputValue === "요르문간드") {
+        click_sound.play();
+        jormungand.style.display = "flex";
+        cain.style.display = "none";
+    } else {
+        wrong();
+    }
+})
+
+// 요르문간드 파트

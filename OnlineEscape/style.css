@@ -39,6 +39,7 @@
 
 body {
     background-image: url('assets/bg1.png');
+    /* background-image: url('assets/bg2.gif'); */
 	background-repeat: repeat !important;
 	background-size: cover;
     background-position: center;
@@ -100,6 +101,26 @@ body {
 		opacity: 0;
 		transform: scale(0.4);
 	}
+}
+
+@keyframes wrong-answer {
+	0%, 100% {
+	  background-color: transparent;
+	}
+	50% {
+	  background-color: #ff0000; /* 붉은 색 배경 */
+	}
+}
+
+#wrong_effect {
+	display: none;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparent;
+	z-index: 10000;
+	animation: wrong-answer 0.4s;
+	opacity: 0.2;
 }
 
 /* 로그인 이전 파트 */
@@ -185,7 +206,6 @@ body {
 	height: 20px;
 	bottom: 38.5px;
 	left: 137px;
-	cursor: pointer;
 }
 
 #login_hint {
@@ -212,3 +232,190 @@ body {
 }
 
 /* 로그인 이후 파트 */
+#scifi_login {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+	#scifi_login {
+		width: 66.666vw;
+		height: 66.666vh;
+	}
+}
+
+#scifi_login_main {
+	position: relative;
+	width: 500px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#scifi_login_context {
+	width: 500px;
+}
+
+#scifi_login_input {
+	position: absolute;
+	width: 250px;
+	height: 30px;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 16px;
+}
+
+#scifi_login_enter {
+	position: absolute;
+	width: 180px;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+#scifi_login_hint_button {
+	position: absolute;
+	width: 120px;
+	bottom: 20px;
+	right: 60px;
+	cursor: pointer;
+}
+
+#scifi_login_message {
+	display: none;
+	position: absolute;
+	width: 300px;
+	top: 20px;
+	right: 0px;
+}
+
+@keyframes slideIn {
+	from {
+	  transform: translateX(100%);
+	}
+	to {
+	  transform: translateX(0);
+	}
+  }
+
+#scifi_login_message_context {
+	width: 300px;
+}
+
+#scifi_login_message_confirm {
+	position: absolute;
+	width: 120px;
+	top: 3px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#cain_message_hint {
+	position: absolute;
+	display: none;
+	width: 567px;
+	height: 300px;
+}
+
+#cain_message_hint_popup {
+	position: absolute;
+	width: 667px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#cain_message_hint_close {
+	position: absolute;
+	width: 30px;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#cain_message_back {
+	display: none;
+	position: absolute;
+	width: 80px;
+	bottom: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+
+#cain_message_next {
+	position: absolute;
+	width: 80px;
+	bottom: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#cain_message_img1 {
+	display: none;
+	position: absolute;
+	width: 274px;
+	height: 180px;
+	top: 52px;
+	left: 16px;
+	cursor: pointer;
+	background: tomato;
+	opacity: 0.3;
+}
+
+#cain_message_img2 {
+	display: none;
+	position: absolute;
+	width: 238px;
+	height: 180px;
+	top: 52px;
+	right: 28px;
+	cursor: pointer;
+	background: aqua;
+	opacity: 0.3;
+}
+
+#scifi_login_hint {
+	position: absolute;
+	display: none;
+	width: 567px;
+	height: 300px;
+}
+
+#scifi_login_hint_popup {
+	position: absolute;
+	width: 667px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#scifi_login_hint_close {
+	position: absolute;
+	width: 30px;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#scifi_login_back {
+	display: none;
+	position: absolute;
+	width: 80px;
+	bottom: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+
+#scifi_login_next {
+	position: absolute;
+	width: 80px;
+	bottom: 10px;
+	right: 10px;
+	cursor: pointer;
+}

@@ -25,6 +25,15 @@
     <!-- <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2Fhidden.fantastrick.co.kr%2FOnlineEscape&count_bg=%23CF1919&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=온라인 방탈출 페이지&edge_flat=false" style="display: none;"> -->
     <!-- Hits 카운터 End -->
 
+    <!-- BGM Assets -->
+    <div id="sound">
+        <audio loop id="main_bgm" src="../assets/mainBGM.mp3"></audio>
+        <audio loop id="story_bgm" src="../assets/storyBGM.mp3"></audio>
+        <audio id="wrong_sound" src="../assets/wrong.mp3"></audio>
+        <audio id="click_sound" src="../assets/click.mp3"></audio>
+    </div>
+    <!-- BGM Assets End -->
+
     <!-- 모바일 세로화면 경고 -->
     <div class="background" id="mobile_warning">
         <img id="mobile_warning_image" src="https://i.ibb.co/98WW3n6/rotate.png" alt="스마트폰 가로 회전" /><br />
@@ -33,14 +42,11 @@
     </div>
     <!-- 모바일 세로화면 경고 End -->
 
-    <!-- BGM Assets -->
-    <div id="sound">
-        <audio id="wrong_sound" src="../assets/wrong.mp3"></audio>
-        <audio id="click_sound" src="../assets/click.mp3"></audio>
-    </div>
-    <!-- BGM Assets End -->
+    <!-- 틀렸을 때 애니메이션 -->
+    <div id="wrong_effect"></div>
+    <!-- 틀렸을 때 애니메이션 End -->
 
-    <!-- 로그인 이전 파트 -->
+    <!-- 로그인 파트 -->
     <div class="display_none_background" id="login">
         <img class="login_title" src="assets/login_1.png" alt="로그인 타이틀" />
 
@@ -71,13 +77,46 @@
             <img id="login_hint_close" src="assets/login_1-3-x_button.png" alt="X" />
         </div>
     </div>
-    <!-- 로그인 이전 파트 End -->
+    <!-- 로그인 파트 End -->
 
-    <!-- 로그인 이후 파트 -->
-    <div class="display_none_background" id="jormungand">
+    <!-- 카인 파트 -->
+    <div class="display_none_background" id="cain">
+        <div id="scifi_login">
+            <div id="scifi_login_message">
+                <img id="scifi_login_message_context" src="assets/scifi_popup.png" alt="메세지 도착" />
+                <img id="scifi_login_message_confirm" src="assets/scifi_popup_enter_button.png" alt="확인" />
+            </div>
+            <div id="scifi_login_main">
+                <img id="scifi_login_context" src="assets/scifi_access_code.png" alt="ACCESS CODE" />
+                <input type="text" class="input_box" id="scifi_login_input" />
+                <img id="scifi_login_enter" src="assets/scifi_login_button.png" alt="LOGIN" />
+                <img id="scifi_login_hint_button" src="assets/scifi_hint_button.png" alt="HINT" />
+            </div>
+        </div>
 
+        <div id="cain_message_hint">
+            <img id="cain_message_hint_popup" src="assets/cain_message_1.png" alt="카인 메세지" />
+            <img id="cain_message_hint_close" src="assets/cain_message_x_button.png" alt="X" />
+            <img id="cain_message_back" src="assets/cain_message_back_button.png" alt="BACK" />
+            <img id="cain_message_next" src="assets/cain_message_next_button.png" alt="NEXT" />
+            <div id="cain_message_img1"></div>
+            <div id="cain_message_img2"></div>
+        </div>
+
+        <div id="scifi_login_hint">
+            <img id="scifi_login_hint_popup" src="assets/cain_message_hint.png" alt="로그인 힌트 팝업" />
+            <img id="scifi_login_hint_close" src="assets/cain_message_x_button.png" alt="X" />
+            <img id="scifi_login_back" src="assets/cain_message_back_button.png" alt="BACK" />
+            <img id="scifi_login_next" src="assets/cain_message_next_button.png" alt="NEXT" />
+        </div>
     </div>
-    <!-- 로그인 이후 파트 End -->
+    <!-- 카인 파트 End -->
+
+    <!-- 로그인 파트 -->
+    <div class="display_none_background" id="jormungand">
+        <img class="jormungand_title" src="assets/jor_title.png" alt="로그인 타이틀" />
+    </div>
+    <!-- 로그인 파트 End -->
 
     <script type="text/javascript" src="script.js"></script>
 </body>
