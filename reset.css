@@ -69,3 +69,8 @@ img {
 	-moz-tap-highlight-color: transparent;
 	-ms-tap-highlight-color: transparent;
 }
+div {
+	-webkit-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
+	-ms-tap-highlight-color: transparent;
+}
