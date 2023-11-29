@@ -643,3 +643,21 @@ body {
 #answer9_1 {
 	bottom: 36px;
 }
+
+#jormungand_page_context_10 {
+	object-position: left;
+}
+#jormungand_input_10 {
+	width: 176px;
+	height: 25px;
+	right: 122px;
+	bottom: 86px;
+}
+#answer10_enter {
+	right: 120px;
+	bottom: 47px;
+}
+#answer10_hint {
+	right: 120px;
+	bottom: 10px;
+}

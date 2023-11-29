@@ -87,7 +87,7 @@ login_hint_close.addEventListener('click', function () {
 })
 login_enter.addEventListener('click', function () {
     var inputValue = login_input.value;
-    // if (inputValue === "7934") {
+    if (inputValue === "7934") {
         document.body.style.backgroundImage = "url('assets/bg2.gif')";
         cain.style.display = "flex";
         login.style.display = "none";
@@ -96,9 +96,9 @@ login_enter.addEventListener('click', function () {
             scifi_login_message.style.animation = "slideIn 0.25s ease-out";
             scifi_login_message.style.display = "flex";
         }, 500);
-    // } else {
-    //     wrong();
-    // }
+    } else {
+        wrong();
+    }
 })
 
 // 카인 파트
@@ -199,7 +199,7 @@ scifi_login_back.addEventListener('click', function () {
 })
 scifi_login_enter.addEventListener('click', function () {
     var inputValue = scifi_login_input.value;
-    // if (inputValue === "JORMUNGAND" || inputValue === "Jormungand" || inputValue === "jormungand" || inputValue === "요르문간드") {
+    if (inputValue === "JORMUNGAND" || inputValue === "Jormungand" || inputValue === "jormungand" || inputValue === "요르문간드") {
         click_sound.play();
         jormungand.style.display = "flex";
         cain.style.display = "none";
@@ -207,9 +207,9 @@ scifi_login_enter.addEventListener('click', function () {
             jormungand_popup.style.display = "flex";
         }, 500);
         bgmChange(2);
-    // } else {
-    //     wrong();
-    // }
+    } else {
+        wrong();
+    }
 })
 
 // 요르문간드 파트
@@ -295,13 +295,13 @@ jormungand_hint_back_4.addEventListener('click', function () {
 })
 answer4_enter.addEventListener('click', function () {
     var inputValue = jormungand_input_4.value;
-    // if (inputValue === "FUTURE" || inputValue === "future") {
+    if (inputValue === "FUTURE" || inputValue === "future") {
         click_sound.play();
         jormungand_page_5.style.display = "flex";
         jormungand_page_4.style.display = "none";
-    // } else {
-    //     wrong();
-    // }
+    } else {
+        wrong();
+    }
 })
 
 answer5_1.addEventListener('click', function () {
@@ -342,4 +342,42 @@ answer9_1.addEventListener('click', function () {
     click_sound.play();
     jormungand_page_10.style.display = "flex";
     jormungand_page_9.style.display = "none";
+})
+
+answer10_hint.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_hint_10.style.animation = "popup-animation 0.1s ease-in-out";
+    jormungand_hint_10.style.display = "flex";
+})
+jormungand_hint_close_10.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_hint_10.style.animation = "popup-close-animation 0.25s ease-in-out";
+    setTimeout(function () {
+        jormungand_hint_10.style.display = "none";
+        jormungand_hint_context_10.src = "assets/jor_echo_10_hint.png";
+        jormungand_hint_back_10.style.display = "none";
+        jormungand_hint_next_10.style.display = "flex";
+    }, 200);
+})
+jormungand_hint_next_10.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_hint_context_10.src = "assets/jor_echo_10_answer.png";
+    jormungand_hint_back_10.style.display = "flex";
+    jormungand_hint_next_10.style.display = "none";
+})
+jormungand_hint_back_10.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_hint_context_10.src = "assets/jor_echo_10_hint.png";
+    jormungand_hint_next_10.style.display = "flex";
+    jormungand_hint_back_10.style.display = "none";
+})
+answer10_enter.addEventListener('click', function () {
+    var inputValue = jormungand_input_10.value;
+    if (inputValue === "전당포근처" || inputValue === "전당포 근처") {
+        click_sound.play();
+        jormungand_page_11.style.display = "flex";
+        jormungand_page_10.style.display = "none";
+    } else {
+        wrong();
+    }
 })
