@@ -226,3 +226,75 @@ answer1_2.addEventListener('click', function () {
     jormungand_page_1_2.style.display = "flex";
     jormungand_page_1.style.display = "none";
 })
+answer1_2_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_1_3.style.display = "flex";
+    jormungand_page_1_2.style.display = "none";
+})
+answer1_1_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_2.style.display = "flex";
+    jormungand_page_1_1.style.display = "none";
+})
+answer1_3_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_2.style.display = "flex";
+    jormungand_page_1_3.style.display = "none";
+})
+answer2_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_3_1.style.display = "flex";
+    jormungand_page_2.style.display = "none";
+})
+answer2_2.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_3_2.style.display = "flex";
+    jormungand_page_2.style.display = "none";
+})
+answer3_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_4.style.display = "flex";
+    jormungand_page_3_1.style.display = "none";
+})
+answer3_2.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_4.style.display = "flex";
+    jormungand_page_3_2.style.display = "none";
+})
+answer4_hint.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_hint_4.style.animation = "popup-animation 0.1s ease-in-out";
+    jormungand_hint_4.style.display = "flex";
+})
+jormungand_hint_close_4.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_hint_4.style.animation = "popup-close-animation 0.25s ease-in-out";
+    setTimeout(function () {
+        jormungand_hint_4.style.display = "none";
+        jormungand_hint_context_4.src = "assets/jor_echo_4_hint.png";
+        jormungand_hint_back_4.style.display = "none";
+        jormungand_hint_next_4.style.display = "flex";
+    }, 200);
+})
+jormungand_hint_next_4.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_hint_context_4.src = "assets/jor_echo_4_answer.png";
+    jormungand_hint_back_4.style.display = "flex";
+    jormungand_hint_next_4.style.display = "none";
+})
+jormungand_hint_back_4.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_hint_context_4.src = "assets/jor_echo_4_hint.png";
+    jormungand_hint_next_4.style.display = "flex";
+    jormungand_hint_back_4.style.display = "none";
+})
+answer4_enter.addEventListener('click', function () {
+    var inputValue = jormungand_input_4.value;
+    if (inputValue === "FUTURE" || inputValue === "future") {
+        click_sound.play();
+        jormungand_page_5.style.display = "flex";
+        jormungand_page_4.style.display = "none";
+    } else {
+        wrong();
+    }
+})

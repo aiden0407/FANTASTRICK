@@ -32,7 +32,7 @@
 .input_box {
 	position: absolute;
 	background-color: transparent;
-	/* border: none; */
+	border: none;
 	color: #fff;
 	padding-left: 8px;
 }
@@ -494,26 +494,125 @@ body {
 
 .jormungand_page_context {
 	width: 630px;
+	height: 284px;
+	object-fit: cover;
+	object-position: left top;
 }
 
 .jormungand_page_answer {
 	position: absolute;
-	height: 45px;
+	height: 42px;
+	cursor: pointer;
+}
+
+.jormungand_page_answer2 {
+	position: absolute;
+	height: 50.1px;
+	cursor: pointer;
+}
+
+.jormungand_page_next {
+	position: absolute;
+	height: 34px;
+	cursor: pointer;
+}
+
+.jormungand_page_enter {
+	position: absolute;
+	height: 35px;
+	cursor: pointer;
+}
+
+.jormungand_page_hint {
+	position: absolute;
+	height: 35px;
+	cursor: pointer;
+}
+
+.jormungand_hint {
+	position: absolute;
+	display: none;
+	width: 567px;
+	height: 300px;
+}
+
+.jormungand_hint_context {
+	position: absolute;
+	width: 667px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.jormungand_hint_close {
+	position: absolute;
+	width: 30px;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.jormungand_hint_back {
+	display: none;
+	position: absolute;
+	width: 80px;
+	bottom: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+
+.jormungand_hint_next {
+	position: absolute;
+	width: 80px;
+	bottom: 10px;
+	right: 10px;
 	cursor: pointer;
 }
 
 #answer1_1 {
 	bottom: 80px;
 }
-
 #answer1_2 {
 	bottom: 30px;
 }
-
 #answer1_1_1 {
-	bottom: 20px;
+	bottom: 24px;
+}
+#answer1_2_1 {
+	bottom: 40px;
+}
+#answer1_3_1 {
+	bottom: 30px;
 }
 
-#answer1_2_1 {
-	bottom: 30px;
+#answer2_1 {
+	bottom: 58px;
+}
+#answer2_2 {
+	bottom: 6px;
+}
+
+#answer3_1 {
+	bottom: 34px;
+}
+#answer3_2 {
+	bottom: 15px;
+}
+
+#jormungand_page_context_4 {
+	object-position: left;
+}
+#jormungand_input_4 {
+	width: 176px;
+	height: 25px;
+	left: 44px;
+	bottom: 129px;
+}
+#answer4_enter {
+	left: 42px;
+	bottom: 84px;
+}
+#answer4_hint {
+	left: 42px;
+	bottom: 41px;
 }
