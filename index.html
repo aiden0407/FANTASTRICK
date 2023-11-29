@@ -1,1 +1,73 @@
-통합 포털 메인
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>FANTASTRICK UNIVERSE</title>
+    <meta name="description" content="판타스트릭 방탈출 - 히든페이지 포털">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FANTASTRICK UNIVERSE">
+    <meta property="og:description" content="판타스트릭 방탈출 - 히든페이지 포털">
+    <!-- <meta property="og:image" content="assets/ogImage.png"> -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <meta name="publisher" content="cailyent0407@gmail.com,www.github.com/aiden0407" /> -->
+
+    <style>
+        body {
+            position: relative;
+            width: 100vw;
+            min-height: 100vh;
+            background-image: url('assets/BG.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+        }
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+        }
+        .poster {
+            width: 300px;
+            height: 420px;
+        }
+        @media screen and (max-width: 1059px) {
+            body {
+                padding: 70px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://fantastrick.co.kr/">
+        <img src="assets/logo.png" alt="판타스트릭 로고" />
+    </a>
+    <div class="row">
+        <a href="./HiddenPage1st/index.html">
+            <img class="poster" src="assets/poster_1.jpg" alt="태초의 신부 이브프로젝트" />
+        </a>
+        <a href="./HiddenPage2nd/index.html">
+            <img class="poster" src="assets/poster_2.png" alt="사자의 서" />
+        </a>
+        <a href="./OnlineEscape/index.html">
+            <img class="poster" src="assets/poster_3.png" alt="온라인 방탈출" />
+        </a>
+    </div>
+</body>
+
+</html>
