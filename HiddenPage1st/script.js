@@ -45,7 +45,7 @@ function fadeIn(audio) {
     audio.volume = 0.1;
     audio.loop = true;
     audio.play();    
-    TweenMax.to(audio, 1, { volume: 1 });
+    TweenMax.to(audio, 1, { volume: 0.7 });
 }
 
 function move() {

@@ -20,7 +20,9 @@ Array.from(images).forEach((image) => {
 
 function bgmChange(track) {
     main_bgm.loop = true;
+    main_bgm.volume = 0.7;
     story_bgm.loop = true;
+    story_bgm.volume = 0.7;
 
     if (track === 1) {
         story_bgm.pause();

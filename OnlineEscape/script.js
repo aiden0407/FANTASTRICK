@@ -21,7 +21,9 @@ Array.from(images).forEach((image) => {
 
 function bgmChange(track) {
     main_bgm.loop = true;
+    main_bgm.volume = 0.7;
     story_bgm.loop = true;
+    story_bgm.volume = 0.7;
 
     if (track === 1) {
         story_bgm.pause();
@@ -65,10 +67,10 @@ loginNextElements.forEach(function (e) {
     });
 });
 eden_button.addEventListener('click', function () {
-    window.location.href = 'http://fantastrick.co.kr/rooms/firstfoundbride/';
+    window.open('http://fantastrick.co.kr/rooms/firstfoundbride/', '_blank');
 })
 abel_button.addEventListener('click', function () {
-    window.location.href = 'http://fantastrick.co.kr/rooms/bookofduat/';
+    window.open('http://fantastrick.co.kr/rooms/bookofduat/', '_blank');
 })
 here_button_1.addEventListener('click', function () {
     // window.location.href = '인스타링크';
@@ -89,7 +91,7 @@ login_enter.addEventListener('click', function () {
         document.body.style.backgroundImage = "url('assets/bg2.gif')";
         cain.style.display = "flex";
         login.style.display = "none";
-        // bgmChange(1);
+        bgmChange(1);
         setTimeout(function () {
             scifi_login_message.style.animation = "slideIn 0.25s ease-out";
             scifi_login_message.style.display = "flex";
@@ -204,7 +206,7 @@ scifi_login_enter.addEventListener('click', function () {
         setTimeout(function () {
             jormungand_popup.style.display = "flex";
         }, 500);
-        // bgmChange(2);
+        bgmChange(2);
     // } else {
     //     wrong();
     // }
@@ -290,11 +292,11 @@ jormungand_hint_back_4.addEventListener('click', function () {
 })
 answer4_enter.addEventListener('click', function () {
     var inputValue = jormungand_input_4.value;
-    if (inputValue === "FUTURE" || inputValue === "future") {
+    // if (inputValue === "FUTURE" || inputValue === "future") {
         click_sound.play();
         jormungand_page_5.style.display = "flex";
         jormungand_page_4.style.display = "none";
-    } else {
-        wrong();
-    }
+    // } else {
+    //     wrong();
+    // }
 })
