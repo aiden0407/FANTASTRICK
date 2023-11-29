@@ -243,6 +243,7 @@ answer1_3_1.addEventListener('click', function () {
     jormungand_page_2.style.display = "flex";
     jormungand_page_1_3.style.display = "none";
 })
+
 answer2_1.addEventListener('click', function () {
     click_sound.play();
     jormungand_page_3_1.style.display = "flex";
@@ -253,6 +254,7 @@ answer2_2.addEventListener('click', function () {
     jormungand_page_3_2.style.display = "flex";
     jormungand_page_2.style.display = "none";
 })
+
 answer3_1.addEventListener('click', function () {
     click_sound.play();
     jormungand_page_4.style.display = "flex";
@@ -263,6 +265,7 @@ answer3_2.addEventListener('click', function () {
     jormungand_page_4.style.display = "flex";
     jormungand_page_3_2.style.display = "none";
 })
+
 answer4_hint.addEventListener('click', function () {
     click_sound.play();
     jormungand_hint_4.style.animation = "popup-animation 0.1s ease-in-out";
@@ -299,4 +302,44 @@ answer4_enter.addEventListener('click', function () {
     // } else {
     //     wrong();
     // }
+})
+
+answer5_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_6.style.display = "flex";
+    jormungand_page_5.style.display = "none";
+})
+
+answer6_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_7.style.display = "flex";
+    jormungand_page_6.style.display = "none";
+})
+
+answer7_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_8_1.style.display = "flex";
+    jormungand_page_7.style.display = "none";
+})
+answer7_2.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_8_2.style.display = "flex";
+    jormungand_page_7.style.display = "none";
+})
+
+answer8_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_9.style.display = "flex";
+    jormungand_page_8_1.style.display = "none";
+})
+answer8_2.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_9.style.display = "flex";
+    jormungand_page_8_2.style.display = "none";
+})
+
+answer9_1.addEventListener('click', function () {
+    click_sound.play();
+    jormungand_page_10.style.display = "flex";
+    jormungand_page_9.style.display = "none";
 })
