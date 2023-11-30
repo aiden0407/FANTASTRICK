@@ -1,21 +1,17 @@
-# FANTASTRICK
+# FANTASTRICK 통합 히든페이지 (외주 작업물)
 
-[판타스트릭](http://fantastrick.co.kr/)은 하이퍼 리얼리즘 방탈출을 추구합니다.
+[판타스트릭](http://fantastrick.co.kr/)은 강남에 1호점, 2호점을 두고있는 하이퍼 리얼리즘 방탈출 카페입니다.
 
-감동, 그 이상의 감동이 있는 방탈출 카페 판타스트릭.
+[판타스트릭은 통합 히든페이지](http://hidden.fantastrick.co.kr)는 아래 3가지 컨텐츠를 통합으로 관리하기 위해 제작된 사이트입니다.
 
-테마 설계 / 인테리어 / 특수 인테리어 / 장치 제작 및 기술 지원 fantastrick@fantastrick.co.kr
+**1호점 "태초의 신부 이브 프로젝트" 테마의 후속 컨텐츠** 
 
-## FANTASTRICK 히든페이지
+**2호점 "사자의 서" 테마의 후속 컨텐츠**
 
-[태초의 신부 이브프로젝트 히든페이지](http://hidden.fantastrick.co.kr/HiddenPage1st)
+**온라인 + 오프라인 방탈출 컨텐츠**
 
-[사자의서 히든페이지](http://hidden.fantastrick.co.kr/HiddenPage2nd)
+이 외에도 앞으로 7개의 추가 컨텐츠 개발이 예정되어있습니다.
 
-[온라인 방탈출 페이지](http://hidden.fantastrick.co.kr/OnlineEscape)
+## 외주 작업 내용
 
-[오프라인 방탈출 페이지](http://hidden.fantastrick.co.kr/OutdoorEscape)
-
-## FANTASTRICK 방문자 카운트
-
-[방문자 카운트 히든페이지](http://hidden.fantastrick.co.kr/count)
+기존에 존재하던 1호점 후속 컨텐츠의 유지보수 및 리팩토링, 이후 모든 컨텐츠 페이지 제작, 통합 페이지 관리, Google Analitics 4를 활용한 방문자 데이터 분석 등을 진행하였습니다.
