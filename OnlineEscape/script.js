@@ -114,13 +114,8 @@ cain_message_hint_close.addEventListener('click', function () {
     cain_message_hint.style.animation = "popup-close-animation 0.25s ease-in-out";
     setTimeout(function () {
         cain_message_hint.style.display = "none";
-        cain_message_hint_popup.src = "assets/cain_message_1.png";
-        cain_message_back.style.display = "none";
-        cain_message_next.style.display = "flex";
         scifi_login_hint_button.style.display = "flex";
         scifi_login_message.style.display = "flex";
-        cain_message_img1_button.style.display = "none";
-        cain_message_img2_button.style.display = "none";
     }, 200);
 })
 cain_message_next.addEventListener('click', function () {
