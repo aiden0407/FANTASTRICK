@@ -194,7 +194,7 @@ function closeIt() {
 }
 
 function soon() {
-    window.location.href = '../index.html';
+    window.location.href = '../';
 }
 
 function pageNext() {
