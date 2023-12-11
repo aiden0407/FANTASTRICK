@@ -574,15 +574,6 @@ a.menu_btn>span {
 	margin-right: 10px;
 }
 
-#sound {
-	width: 0;
-	height: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-}
-
 #before_chk {
 	position: absolute;
 	top: 50%;
