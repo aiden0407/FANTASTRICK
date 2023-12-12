@@ -72,19 +72,6 @@ eden_button.addEventListener('click', function () {
 abel_button.addEventListener('click', function () {
     window.open('http://fantastrick.co.kr/rooms/bookofduat/', '_blank');
 })
-// here_button_1.addEventListener('click', function () {
-//     // window.location.href = '인스타링크';
-// })
-// here_button_2.addEventListener('click', function () {
-//     login_hint.style.animation = "popup-animation 0.1s ease-in-out";
-//     login_hint.style.display = "flex";
-// })
-login_hint_close.addEventListener('click', function () {
-    login_hint.style.animation = "popup-close-animation 0.25s ease-in-out";
-    setTimeout(function () {
-        login_hint.style.display = "none";
-    }, 200);
-})
 login_enter.addEventListener('click', function () {
     var inputValue = login_input.value;
     if (inputValue === "7934") {
