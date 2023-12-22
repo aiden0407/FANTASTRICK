@@ -39,12 +39,16 @@
 	opacity: 0.2;
 }
 
+html {
+	background-color: #000;
+}
+
 body {
+	display: none;
 	background-repeat: repeat;
 	background-size: cover;
     background-position: center;
 	overflow: hidden;
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;

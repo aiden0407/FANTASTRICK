@@ -37,17 +37,20 @@
 	padding-left: 8px;
 }
 
+html {
+	background-color: #000;
+}
+
 body {
+	display: none;
     background-image: url('assets/bg1.png');
 	background-repeat: repeat !important;
 	background-size: cover;
     background-position: center;
 	overflow: hidden;
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #000;
 	padding-top: env(safe-area-inset-top);
 	padding-bottom: env(safe-area-inset-bottom);
 }

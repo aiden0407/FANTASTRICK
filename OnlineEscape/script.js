@@ -1,6 +1,7 @@
 // 공통 부분
 function setViewportHeight() {
     document.body.style.height = window.innerHeight + "px";
+    document.body.style.display = "flex";
 }
 window.addEventListener("load", setViewportHeight);
 window.addEventListener("resize", setViewportHeight);
