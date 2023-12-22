@@ -181,7 +181,7 @@ body {
 #login_enter {
 	position: absolute;
 	width: 70px;
-	bottom: 7px;
+	bottom: 29px;
 	right: 120px;
 	cursor: pointer;
 }
@@ -190,7 +190,7 @@ body {
 	position: absolute;
 	width: 140px;
 	height: 20px;
-	bottom: 14px;
+	bottom: 35.5px;
 	left: 126px;
 }
 
