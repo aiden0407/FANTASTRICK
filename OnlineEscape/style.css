@@ -181,7 +181,7 @@ body {
 #login_enter {
 	position: absolute;
 	width: 70px;
-	bottom: 29px;
+	bottom: 7px;
 	right: 120px;
 	cursor: pointer;
 }
@@ -190,8 +190,8 @@ body {
 	position: absolute;
 	width: 140px;
 	height: 20px;
-	bottom: 35px;
-	left: 128px;
+	bottom: 14px;
+	left: 126px;
 }
 
 /* 카인 파트 */
