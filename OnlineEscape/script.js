@@ -278,7 +278,7 @@ jormungand_hint_back_4.addEventListener('click', function () {
 })
 answer4_enter.addEventListener('click', function () {
     var inputValue = jormungand_input_4.value;
-    if (inputValue === "FUTURE" || inputValue === "future") {
+    if (inputValue === "FUTURE" || inputValue === "Future" || inputValue === "future") {
         click_sound.play();
         jormungand_page_5.style.display = "flex";
         jormungand_page_4.style.display = "none";
