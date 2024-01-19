@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNM0PD41NF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NNM0PD41NF');
+    </script>
+    <!-- Google tag (gtag.js) End -->
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>PAST WORLD</title>
+    <meta name="description" content="판타스트릭 방탈출 - 오프라인 히든페이지">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FANTASTRICK UNIVERSE">
+    <meta property="og:description" content="판타스트릭 방탈출 - 오프라인 히든페이지">
+    <meta property="og:image" content="../assets/ogImage.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <meta name="publisher" content="cailyent0407@gmail.com" /> -->
+</head>
+
+<body onload="init()">
+    <!-- BGM Assets -->
+    <audio loop id="main_bgm" src="../assets/onlineBgmStart.mp3"></audio>
+    <audio loop id="story_bgm" src="../assets/onlineBgmLoop.mp3"></audio>
+    <audio id="wrong_sound" src="../assets/wrong.mp3"></audio>
+    <audio id="click_sound" src="../assets/click.mp3"></audio>
+    <!-- BGM Assets End -->
+
+    <!-- 모바일 세로화면 경고 -->
+    <div class="background" id="mobile_warning">
+        <img id="mobile_warning_image" src="https://i.ibb.co/98WW3n6/rotate.png" alt="스마트폰 가로 회전" /><br />
+        <p>본 페이지는 가로 화면에 최적화 되어있습니다.</p>
+        <p>스마트폰을 가로로 돌려서 사용해 주세요.</p>
+    </div>
+    <!-- 모바일 세로화면 경고 End -->
+
+    <!-- 틀렸을 때 애니메이션 -->
+    <div id="wrong_effect"></div>
+    <!-- 틀렸을 때 애니메이션 End -->
+
+    <!-- 요르문간드 파트 -->
+    <div class="display_none_background" id="jormungand">
+        <img class="jormungand_background" src="../OnlineEscape/assets/jor_bg2.png" alt="요르문간드 배경" />
+        <img class="jormungand_title" src="../OnlineEscape/assets/jor_title.png" alt="요르문간드 타이틀" />
+
+        <div class="jormungand_page" id="jormungand_page_0">
+            <img class="jormungand_page_context" id="jormungand_page_context_0" src="../OnlineEscape/assets/jor_echo_12(later).png" alt="요르문간드 페이지 0" />
+            <input type="text" class="input_box" id="jormungand_input_0" />
+            <img class="jormungand_page_button" id="enter0" src="../OnlineEscape/assets/jor_echo_12_enter_button(later).png" alt="확인" />
+        </div>
+
+        <div class="jormungand_page" id="jormungand_page_1">
+            <img class="jormungand_page_context" src="assets/off_1.png" alt="요르문간드 페이지 1" />
+            <img class="jormungand_page_next" id="next1" src="../OnlineEscape/assets/cain_message_next_button.png" alt="NEXT" />
+        </div>
+
+        <div class="jormungand_page" id="jormungand_page_2">
+            <img class="jormungand_page_context" src="assets/off_2.png" alt="요르문간드 페이지 2" />
+            <input type="text" class="input_box" id="jormungand_input_1" />
+            <input type="text" class="input_box" id="jormungand_input_2" />
+            <input type="text" class="input_box" id="jormungand_input_3" />
+            <img class="jormungand_page_button" id="answer2" src="../OnlineEscape/assets/jor_echo_enter_button.png" alt="확인" />
+            <img class="jormungand_page_button" id="hint2" src="../OnlineEscape/assets/jor_echo_hint_button.png" alt="힌트" />
+            <img class="jormungand_page_back" id="back2" src="../OnlineEscape/assets/cain_message_back_button.png" alt="BACK" />
+        </div>
+
+        <div class="jormungand_page" id="jormungand_page_3">
+            <img class="jormungand_page_context" src="assets/off_3.png" alt="요르문간드 페이지 3" />
+            <img class="jormungand_page_button" id="w3w" src="assets/off_3_w3w_link_button.png" alt="w3w 지도 사이트(링크)" />
+            <input type="text" class="input_box" id="jormungand_input_4" />
+            <img class="jormungand_page_button" id="answer3" src="assets/off_3_enter_button.png" alt="입력" />
+            <img class="jormungand_page_button" id="hint3" src="assets/off_3_hint_button.png" alt="힌트" />
+        </div>
+    </div>
+    <!-- 요르문간드 파트 End -->
+
+    <!-- PAST WORLD 파트 -->
+    <div class="past_world_background" id="past_world">
+        <img id="past_world_enter" src="assets/off4_enter.png" alt="ENTER" />
+
+        <div id="past_world_page">
+            <img id="building1_mark" src="assets/off5_question_button.png" alt="?" />
+            <img id="building2_mark" src="assets/off5_question_button.png" alt="?" />
+            <img id="building3_mark" src="assets/off5_question_button.png" alt="?" />
+            <img id="building4_mark" src="assets/off5_question_button.png" alt="?" />
+            <img id="building5_mark" src="assets/off5_question_button.png" alt="?" />
+            <img id="building6_mark" src="assets/off5_question_button.png" alt="?" />
+            <img id="building7_mark" src="assets/off5_question_button.png" alt="?" />
+        </div>
+
+        <div class="question" id="building1_question">
+            <img class="context" id="building1_context" src="assets/off_building4_quest.png" alt="아이디, 옥상, 늘렸다" />
+            <img class="close" id="building1_close" src="assets/off_popup_x.png" alt="X" />
+            <input type="text" class="input_box building_input" id="building1_input" />
+            <img class="enter" id="building1_enter" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building1_hint" src="assets/off_quest_hint.png" alt="힌트" />
+            <img class="detail" id="building1_detail" src="assets/off_memo_sum_button.png" alt="간략히 보기" />
+        </div>
+
+        <div class="question" id="building2_question">
+            <img class="context" id="building2_context" src="assets/off_building2_quest.png" alt="끈기, 안개, 수납" />
+            <img class="close" id="building2_close" src="assets/off_popup_x.png" alt="X" />
+            <input type="text" class="input_box building_input" id="building2_input" />
+            <img class="enter" id="building2_enter" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building2_hint" src="assets/off_quest_hint.png" alt="힌트" />
+            <img class="detail" id="building2_detail" src="assets/off_memo_sum_button.png" alt="간략히 보기" />
+            <img class="next" id="building2_next" src="assets/off_next_button.png" alt="next" />
+            <img class="back" id="building2_back" src="assets/off_back_button.png" alt="back" />
+        </div>
+
+        <div class="question" id="building3_question">
+            <img class="context" id="building3_context" src="assets/off_building1_quest.png" alt="살았다, 환희, 부장" />
+            <img class="close" id="building3_close" src="assets/off_popup_x.png" alt="X" />
+            <input type="text" class="input_box building_input" id="building3_input" />
+            <img class="enter" id="building3_enter" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building3_hint" src="assets/off_quest_hint.png" alt="힌트" />
+            <img class="detail" id="building3_detail" src="assets/off_memo_sum_button.png" alt="간략히 보기" />
+        </div>
+
+        <div class="question" id="building4_question">
+            <img class="context" id="building4_context" src="assets/off_building3_quest.png" alt="활짝, 믿은, 매화" />
+            <img class="close" id="building4_close" src="assets/off_popup_x.png" alt="X" />
+            <input type="text" class="input_box building_input" id="building4_input" />
+            <img class="enter" id="building4_enter" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building4_hint" src="assets/off_quest_hint.png" alt="힌트" />
+            <img class="detail" id="building4_detail" src="assets/off_memo_sum_button.png" alt="간략히 보기" />
+        </div>
+
+        <div class="question" id="building5_question">
+            <img class="context" id="building5_context" src="assets/off_building5_quest.png" alt="독학, 소나기, 밀림" />
+            <img class="close" id="building5_close" src="assets/off_popup_x.png" alt="X" />
+            <input type="text" class="input_box building_input" id="building5_input" />
+            <img class="enter" id="building5_enter" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building5_hint" src="assets/off_quest_hint.png" alt="힌트" />
+        </div>
+
+        <div class="question" id="building6_question">
+            <img class="context" id="building6_context" src="assets/off_subway_quest.png" alt="거래, 베개, 계산기" />
+            <img class="close" id="building6_close" src="assets/off_popup_x.png" alt="X" />
+
+            <input type="text" class="input_box building_input" id="building6_input1" />
+            <img class="enter" id="building6_enter1" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building6_hint1" src="assets/off_quest_hint.png" alt="힌트" />
+
+            <img class="next" id="building6_next" src="assets/off_next_button.png" alt="next" />
+            <img class="back" id="building6_back" src="assets/off_back_button.png" alt="back" />
+            
+            <input type="text" class="input_box building_input" id="building6_input2" />
+            <img class="enter" id="building6_enter2" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building6_hint2" src="assets/off_quest_hint.png" alt="힌트" />
+
+            <img id="building6_black_box" src="assets/blackbox_button.png" alt="블랙박스 영상" />
+            
+            <input type="text" class="input_box building_input" id="building6_input3" />
+            <img class="enter" id="building6_enter3" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building6_hint3" src="assets/off_quest_hint.png" alt="힌트" />
+            
+            <input type="text" class="input_box building_input" id="building6_input4" />
+            <img class="enter" id="building6_enter4" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building6_hint4" src="assets/off_quest_hint.png" alt="힌트" />
+            
+            <input type="text" class="input_box building_input" id="building6_input5" />
+            <img class="enter" id="building6_enter5" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building6_hint5" src="assets/off_quest_hint.png" alt="힌트" />
+        </div>
+
+        <div class="question" id="building7_question">
+            <img class="context" id="building7_context" src="assets/off_building6_quest.png" alt="착했다, 일행, 적용" />
+            <img class="close" id="building7_close" src="assets/off_popup_x.png" alt="X" />
+
+            <input type="text" class="input_box building_input" id="building7_input1" />
+            <img class="enter" id="building7_enter1" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building7_hint1" src="assets/off_quest_hint.png" alt="힌트" />
+
+            <input type="text" class="input_box building_input" id="building7_input2" />
+            <img class="enter" id="building7_enter2" src="assets/off_quest_ok.png" alt="입력" />
+            <img class="hint" id="building7_hint2" src="assets/off_quest_hint.png" alt="힌트" />
+        </div>
+    </div>
+    <!-- PAST WORLD 파트 End -->
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

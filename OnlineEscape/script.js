@@ -357,9 +357,7 @@ jormungand_hint_back_10.addEventListener('click', function () {
 answer10_enter.addEventListener('click', function () {
     var inputValue = jormungand_input_10.value;
     if (inputValue === "전당포근처" || inputValue === "전당포 근처") {
-        click_sound.play();
-        jormungand_page_11.style.display = "flex";
-        jormungand_page_10.style.display = "none";
+        window.location.pathname = '/OfflineEscape';
     } else {
         wrong();
     }
