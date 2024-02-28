@@ -180,11 +180,11 @@ body {
   width: 140px;
   height: 20px;
   left: 136px;
-  bottom: 24px;
+  bottom: 15px;
 }
 #enter0 {
   right: 120px;
-  bottom: 22px;
+  bottom: 13px;
 }
 
 #jormungand_input_1 {
@@ -213,7 +213,7 @@ body {
 }
 
 #w3w {
-  top: 90px;
+  top: 78px;
 }
 #jormungand_input_4 {
   width: 120px;
@@ -468,14 +468,15 @@ body {
 
 #building4_next {
   display: flex;
-  height: 22px;
+  height: 24px;
   bottom: 16px;
   right: 16px;
 }
 #building4_back {
-  height: 22px;
+  height: 24px;
   bottom: 16px;
-  left: 16px;
+  left: 24px;
+  opacity: 0;
 }
 #building4_input {
   display: none;
@@ -522,6 +523,12 @@ body {
   height: 30px;
   bottom: 12px;
   cursor: pointer;
+}
+
+#building6_youtube {
+  display: none;
+  position: absolute;
+  top: 18px;
 }
 
 #building6_input3 {

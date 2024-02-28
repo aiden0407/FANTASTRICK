@@ -59,7 +59,7 @@ answer2.addEventListener("click", function () {
   // if (true) {
   if (jormungand_input_1.value === "발바닥" && jormungand_input_2.value === "체력" && jormungand_input_3.value === "구간") {
     // click_sound.play();
-    jormungand_page_3.style.display = "flex";
+    jormungand_page_3_0.style.display = "flex";
     jormungand_page_2.style.display = "none";
   } else {
     wrong();
@@ -107,9 +107,19 @@ jormungand_hint2_back.addEventListener('click', function () {
 
 w3w.addEventListener("click", function () {
   window.open(
-    "https://what3words.com/%EB%B0%9C%EB%B0%94%EB%8B%A5.%EC%B2%B4%EB%A0%A5.%EA%B5%AC%EA%B0%84",
+    "https://m.map.kakao.com/actions/searchView?q=%2F%2F%2F%EB%B0%9C%EB%B0%94%EB%8B%A5.%EC%B2%B4%EB%A0%A5.%EA%B5%AC%EA%B0%84&wxEnc=LVSOTP&wyEnc=QNLTTMN&lvl=4",
     "_blank"
   );
+});
+next3.addEventListener("click", function () {
+  // click_sound.play();
+  jormungand_page_3.style.display = "flex";
+  jormungand_page_3_0.style.display = "none";
+});
+back3.addEventListener("click", function () {
+  // click_sound.play();
+  jormungand_page_3_0.style.display = "flex";
+  jormungand_page_3.style.display = "none";
 });
 answer3.addEventListener("click", function () {
   // if (true) {
@@ -1010,6 +1020,7 @@ building_hint6_2_back.addEventListener('click', function () {
 building6_black_box.addEventListener("click", function () {
   // click_sound.play();
   building6_black_box.style.display = "none";
+  building6_youtube.style.display = "flex";
   building6_context.src = "assets/blackbox_video.png";
   building6_input3.style.display = "flex";
   building6_enter3.style.display = "flex";
@@ -1030,6 +1041,7 @@ building6_enter3.addEventListener("click", function () {
   ) {
     // click_sound.play();
     building6_context.src = "assets/off_subway_quest10.png";
+    building6_youtube.style.display = "none";
     building6_input3.style.display = "none";
     building6_enter3.style.display = "none";
     building6_hint3.style.display = "none";
