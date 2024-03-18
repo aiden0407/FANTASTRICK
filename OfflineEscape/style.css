@@ -592,6 +592,11 @@ body {
   bottom: 10px;
 }
 
+#building7_youtube {
+  display: none;
+  position: absolute;
+  top: 18px;
+}
 #building7_input2 {
   display: none;
   left: 110px;
