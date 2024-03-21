@@ -21,9 +21,9 @@ Array.from(images).forEach((image) => {
 
 function bgmChange(track) {
     main_bgm.loop = true;
-    main_bgm.volume = 0.7;
+    main_bgm.volume = 0.5;
     story_bgm.loop = true;
-    story_bgm.volume = 0.7;
+    story_bgm.volume = 0.5;
 
     if (track === 1) {
         story_bgm.pause();
@@ -78,7 +78,7 @@ main_menu_button3.addEventListener('click', function () {
     alert("준비 중인 기능입니다.");
 })
 main_menu_button4.addEventListener('click', function () {
-    window.location.href = '../';
+    window.location.href = 'https://fantastrickside.gabia.io/hidden-page-online/';
 })
 main_menu_popup_close.addEventListener('click', function () {
     click_sound.play();

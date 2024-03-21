@@ -1315,6 +1315,7 @@ building7_enter2.addEventListener("click", function () {
     var element = document.getElementById("building7_youtube");
     element.parentNode.removeChild(element);
     building7_context.src = "assets/off_building7_end.png";
+    building7_next.style.display = "flex";
     building7_input2.style.display = "none";
     building7_enter2.style.display = "none";
     building7_hint2.style.display = "none";
@@ -1322,6 +1323,17 @@ building7_enter2.addEventListener("click", function () {
     wrong();
   }
 });
+building7_next.addEventListener("click", function () {
+  building7_context.src = "assets/off_building7_end2.png";
+  building7_next.style.display = "none";
+  building7_back.style.display = "flex";
+});
+building7_back.addEventListener("click", function () {
+  building7_context.src = "assets/off_building7_end.png";
+  building7_back.style.display = "none";
+  building7_next.style.display = "flex";
+});
+
 building7_hint2.addEventListener("click", function () {
   click_sound.play();
   building_hint7_2.style.animation = "popup-animation 0.1s ease-in-out";

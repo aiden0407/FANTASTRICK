@@ -45,7 +45,7 @@ function fadeIn(audio) {
     audio.volume = 0.1;
     audio.loop = true;
     audio.play();    
-    TweenMax.to(audio, 1, { volume: 0.7 });
+    TweenMax.to(audio, 1, { volume: 0.5 });
 }
 
 function move() {
@@ -194,7 +194,7 @@ function closeIt() {
 }
 
 function soon() {
-    window.location.href = '../';
+    window.location.href = 'https://fantastrickside.gabia.io/hidden-page-online/';
 }
 
 function pageNext() {
