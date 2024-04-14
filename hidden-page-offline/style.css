@@ -546,6 +546,14 @@ body {
   right: 120px;
   bottom: 11px;
 }
+#building6_link3 {
+  display: none;
+  position: absolute;
+  height: 29px;
+  right: 42px;
+  bottom: 11px;
+  cursor: pointer;
+}
 
 #building6_input4 {
   display: none;
@@ -611,4 +619,12 @@ body {
   display: none;
   right: 116px;
   bottom: 11px;
+}
+#building7_link2 {
+  display: none;
+  position: absolute;
+  height: 28px;
+  right: 37px;
+  bottom: 11px;
+  cursor: pointer;
 }

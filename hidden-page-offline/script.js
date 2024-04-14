@@ -1058,6 +1058,7 @@ building6_black_box.addEventListener("click", function () {
   building6_input3.style.display = "flex";
   building6_enter3.style.display = "flex";
   building6_hint3.style.display = "flex";
+  building6_link3.style.display = "flex";
 });
 
 building6_enter3.addEventListener("click", function () {
@@ -1080,10 +1081,14 @@ building6_enter3.addEventListener("click", function () {
     building6_input3.style.display = "none";
     building6_enter3.style.display = "none";
     building6_hint3.style.display = "none";
+    building6_link3.style.display = "none";
     building6_next.style.display = "flex";
   } else {
     wrong();
   }
+});
+building6_link3.addEventListener("click", function () {
+  window.open("https://www.youtube.com/embed/veoW3C6Oaww", "_blank");
 });
 building6_hint3.addEventListener("click", function () {
   click_sound.play();
@@ -1259,6 +1264,7 @@ building7_enter1.addEventListener("click", function () {
     building7_input2.style.display = "flex";
     building7_enter2.style.display = "flex";
     building7_hint2.style.display = "flex";
+    building7_link2.style.display = "flex";
   } else {
     wrong();
   }
@@ -1319,21 +1325,14 @@ building7_enter2.addEventListener("click", function () {
     building7_input2.style.display = "none";
     building7_enter2.style.display = "none";
     building7_hint2.style.display = "none";
+    building7_link2.style.display = "none";
   } else {
     wrong();
   }
 });
-building7_next.addEventListener("click", function () {
-  building7_context.src = "assets/off_building7_end2.png";
-  building7_next.style.display = "none";
-  building7_back.style.display = "flex";
+building7_link2.addEventListener("click", function () {
+  window.open("https://www.youtube.com/embed/q5ULZK-CxDw", "_blank");
 });
-building7_back.addEventListener("click", function () {
-  building7_context.src = "assets/off_building7_end.png";
-  building7_back.style.display = "none";
-  building7_next.style.display = "flex";
-});
-
 building7_hint2.addEventListener("click", function () {
   click_sound.play();
   building_hint7_2.style.animation = "popup-animation 0.1s ease-in-out";
@@ -1357,4 +1356,17 @@ building_hint7_2_back.addEventListener("click", function () {
   building_hint7_2_popup.src = `assets/off_44_hint1.png`;
   building_hint7_2_next.style.display = "flex";
   building_hint7_2_back.style.display = "none";
+});
+
+building7_next.addEventListener("click", function () {
+  click_sound.play();
+  building7_context.src = "assets/off_building7_end2.png";
+  building7_next.style.display = "none";
+  building7_back.style.display = "flex";
+});
+building7_back.addEventListener("click", function () {
+  click_sound.play();
+  building7_context.src = "assets/off_building7_end.png";
+  building7_back.style.display = "none";
+  building7_next.style.display = "flex";
 });
