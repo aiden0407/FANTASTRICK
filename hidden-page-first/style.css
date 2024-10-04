@@ -78,19 +78,25 @@ div#login {
 }
 
 .loading {
-	background-image: url("https://i.ibb.co/9s5X2bm/jarvis1.gif");
+	background-image: url("assets/jarvis1.gif");
 	background-position-x: center;
 	background-position-y: 20%;
 	background-repeat: no-repeat;
 	background-size: auto 720px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .loaded {
-	background-image: url("https://i.ibb.co/mDW9K4D/jarvis2.gif");
+	background-image: url("assets/jarvis1.gif");
 	background-position-x: center;
 	background-position-y: 20%;
 	background-repeat: no-repeat;
 	background-size: auto 720px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 h1 {
@@ -188,7 +194,7 @@ h1 {
 	transform: translate(-50%, -50%);
 	width: 812px;
 	height: 406px;
-	background: url("https://i.ibb.co/G7rTXqQ/bg-login.png") no-repeat;
+	background: url("assets/bg_login.png") no-repeat;
 }
 
 .answer_area {
@@ -198,7 +204,7 @@ h1 {
 	transform: translate(-50%, -50%);
 	width: 684px;
 	height: 342px;
-	background: url("https://i.ibb.co/zmwwLzL/bg-answer.png") no-repeat;
+	background: url("assets/bg_answer.png") no-repeat;
 }
 
 .answer_area:befort {
@@ -340,7 +346,7 @@ h1 {
 	height: 720px;
 	margin-left: -640px;
 	margin-top: -360px;
-	background: url("https://i.ibb.co/4WcNn7r/bg-page.jpg") no-repeat;
+	background: url("assets/bg_page.jpg") no-repeat;
 	background-size: cover;
 	z-index: 11;
 }
@@ -379,7 +385,7 @@ h1 {
 	left: 840px;
 	width: 315px;
 	height: 395px;
-	background: url("https://i.ibb.co/swnRMmP/object-play.jpg") no-repeat;
+	background: url("assets/object_play.jpg") no-repeat;
 	background-size: cover;
 	z-index: 98;
 }
@@ -432,7 +438,7 @@ a.menu_btn>span {
 	margin-left: -596px;
 	width: 1192px;
 	height: 694px;
-	background: url("https://i.ibb.co/SxsNgLx/bg-subpage.png") no-repeat;
+	background: url("assets/bg_subpage.png") no-repeat;
 	background-size: cover;
 	z-index: 99;
 }

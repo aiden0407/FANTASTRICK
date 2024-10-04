@@ -83,8 +83,8 @@ function readyGo() {
     bgm1.play();
     fadeIn(bgm1);
     var loadComplete = setTimeout(function () {
-        bgLoading.style.display = "none";
-        bgLoaded.style.display = "block";
+        // bgLoading.style.display = "none";
+        // bgLoaded.style.display = "block";
         loadArea.style.display = "block";
     }, 3000);
     var loadStart = setTimeout(function () {
